@@ -8,7 +8,7 @@ Format penulisan nama file adalah **PPBO_01_NIM**, dengan isi file sebagai berik
 
 // import ...
 
-public class PPBO_01_Tugas {
+public class PPBO_01_NIM {
     public static void main(String[] args) {
         // ...
     }
