@@ -182,6 +182,99 @@ public static void main(String[] args) {
 
 # Konstanta
 
+Seperti namanya, konstanta adalah entitas dalam pemrograman yang nilainya tidak dapat diubah. Java tidak mendukung konstanta secara langsung. Namun, ada cara alternatif untuk mendefinisikan konstanta di Java dengan menggunakan modifier non-access `static` dan `final`.
+
+## Cara mendeklarasikan konstanta di Java
+Menurut konvensi penamaan Java, nama identifikasi harus dalam huruf kapital. Untuk menuliskan konstanta, kita perlu modifier non-access `static` dan `final`. Tujuan menggunakan modifier `static` adalah untuk mengelola memori. Hal ini juga memungkinkan variabel tersedia tanpa memuat instance dari kelas di mana variabel itu didefinisikan. Modifier `final` mewakili bahwa nilai variabel tidak dapat diubah. Hal ini yang membuat tipe data primitif menjadi tidak dapat diubah.
+
+Syntax untuk mendeklarasikan konstanta adalah sebagai berikut:
+
+```java
+static final tipe_data NAMA_KONSTANTA = nilai;
+```
+
+Contohnya, `price` adalah variabel yang ingin kita jadikan konstan.
+
+```java
+static final double PRICE = 432.78;
+```
+
+Di mana `static` dan `final` adalah modifier non-access. `double` adalah tipe data dan `PRICE` adalah nama identifikasi di mana nilai 432.78 diberikan.
+
+Dalam pernyataan di atas, modifier `static` menyebabkan variabel tersedia tanpa instance dari kelas yang mendefinisikannya, dan modifier `final` membuat variabel menjadi tetap.
+
+## Mengapa perlu ada `static final`?
+Jika kita mendeklarasikan variabel sebagai `static`, semua objek dari kelas (di mana konstanta didefinisikan) akan dapat mengakses variabel tersebut dan dapat mengubah nilainya. Untuk mengatasi masalah ini, perlu menggunakan modifier `final` dengan modifier `static`.
+
+Ketika variabel didefinisikan sebagai `final`, beberapa instansi dari nilai konstan yang sama akan dibuat untuk setiap objek yang berbeda, yang tidak diinginkan.
+
+Ketika menggunakan modifier `static` dan `final` bersama-sama, variabel tetap menjadi statis dan dapat diinisialisasi sekali. Oleh karena itu, untuk mendeklarasikan variabel sebagai konstan, digunakanlah modifier `static` dan `final`. Jadi, semua objek kelas akan berbagi lokasi memori yang sama (dalam hal mengakses konstanta).
+
+## Mengapa kita menggunakan konstanta?
+Penggunaan konstanta dalam pemrograman membuat program menjadi lebih mudah dan dapat dipahami oleh orang lain. Hal ini juga bisa mempercepat kinerja karena variabel konstan dicache oleh JVM dan aplikasi.
+
+## Poin yang perlu diingat:
+- Tulis nama identifikasi dalam huruf kapital yang ingin kita deklarasikan sebagai konstan. Misalnya, `MAX = 12`.
+- Jika kita menggunakan private access-specifier sebelum nama konstan, nilai konstan tidak dapat diubah dalam kelas tertentu.
+- Jika kita menggunakan public access-specifier sebelum nama konstan, nilai konstan dapat diubah dalam program.
+
+Mari kita lihat beberapa contoh cara menggunakan konstanta.
+
+### Contoh 1: Mendeklarasikan Konstan sebagai Private
+```java
+import java.util.Scanner;
+public class ConstantExample1 {
+    //declaring constant   
+    private static final double PRICE = 234.90;
+    public static void main(String[] args) {
+        int unit;
+        double total_bill;
+        System.out.print("Enter the number of units you have used: ");
+        Scanner sc = new Scanner(System.in);
+        unit = sc.nextInt();
+        total_bill = PRICE * unit;
+        System.out.println("The total amount you have to deposit is: " + total_bill);
+    }
+}
+```
+
+### Contoh 2:
+```java
+public class ConstantExample2 {
+    private static final double PRICE = 2999;
+    public static void main(String[] args) {
+        System.out.println("Old Price of Iron: " + PRICE);
+        ConstantExample obj = new ConstantExample();
+        obj.showPrice();
+    }
+}
+class ConstantExample {
+    private static final double PRICE = 3599;
+    void showPrice() {
+        System.out.print("New Price of Iron: " + PRICE);
+    }
+}
+```
+
+### Contoh 3: Mendeklarasikan Konstan sebagai Public
+Dalam contoh berikut, kita telah mendeklarasikan konstan PI sebagai public. Dalam metode main(), kita telah memberikan nilai 3,15 pada konstan PI. Setelah itu, kita telah memanggil metode printValue(). Ketika kita menjalankan program, itu menunjukkan kesalahan tidak dapat memberikan nilai ke variabel final PI.
+
+```java
+public class ConstantExample3 {
+    //declaring PI as constant   
+    public static final double PI = 3.14;
+    public static void main(String[] args) {
+        printValue();
+        //trying to assign 3.15 in the constant PI  
+        PI = 3.15;
+        printValue();
+    }
+    void printValue() {
+        System.out.print("The value of PI cannot be changed to " + PI);
+    }
+}
+```
+
 # Primitive Data Type
 
 | Jenis Tipe Data | Deskripsi                                                        | Rentang Nilai                                    | Contoh Nilai                        |
