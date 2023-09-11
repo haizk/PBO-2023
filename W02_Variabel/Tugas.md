@@ -14,7 +14,7 @@ Anda adalah seorang pemrogram yang diberi tugas untuk membuat program sederhana 
 
 5. **Parameter**: Anda akan membuat dua method, yaitu `jualBarang` dan `restokBarang`. method `jualBarang` akan menerima parameter berupa nama barang yang dibeli oleh pelanggan dan jumlah barang yang dibeli. method ini akan mengurangkan stok barang yang dibeli dari toko, menghitung total belanjaan, dan mengupdate jumlah uang kas toko. method `restokBarang` akan menerima parameter berupa nama barang dan jumlah barang yang akan di-restok. method ini akan menambahkan jumlah barang yang di-restok ke inventaris toko.
 
-6. **Konstanta**: Gunakan konstanta untuk mendefinisikan pajak penjualan sebesar 10% yang digunakan di setiap pembelian.
+6. **Konstanta**: Gunakan konstanta untuk mendefinisikan pajak pertambahan nilai sebesar 11% yang digunakan di setiap pembelian.
 
 ## Penilaian:
 
