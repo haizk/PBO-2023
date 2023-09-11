@@ -1,4 +1,4 @@
-(Terakhir diperbarui 11 September 2023 pukul 10.03 oleh Alfiki, bukan AI)
+(Terakhir diperbarui 11 September 2023 pukul 11.42 oleh Alfiki, bukan AI)
 
 # Variabel
 Variabel digunakan untuk menyimpan dan mengelola data di dalam program. Di Java, ada berbagai jenis variabel, misalnya:
@@ -447,6 +447,9 @@ Array adalah struktur data yang digunakan untuk menyimpan kumpulan elemen dengan
    }
    ```  
 
+## Class
+Dalam pemrograman berorientasi objek, sebuah class adalah blueprint atau cetakan yang digunakan untuk membuat objek. Class mendefinisikan atribut (variabel) dan metode (fungsi) yang akan dimiliki oleh objek yang akan dibuat berdasarkan class tersebut. Dengan kata lain, class adalah abstraksi dari objek yang mendeskripsikan karakteristik dan perilaku yang dimiliki oleh objek. Penjelasan mengenai class ada pada materi pertemuan pertama.
+
 ## Objek
 Objek adalah salah satu konsep paling fundamental dalam bahasa pemrograman Java. Ini adalah instance (wujud nyata) dari kelas, dan sebagian besar kode Java ditulis dalam konteks objek. Berikut adalah beberapa poin penting terkait objek di Java:
 
@@ -458,16 +461,168 @@ Objek adalah salah satu konsep paling fundamental dalam bahasa pemrograman Java.
 
 **Inisialisasi:** Objek biasanya diinisialisasi menggunakan konstruktor kelas. Konstruktor adalah metode khusus yang dipanggil saat objek dibuat. Ini digunakan untuk mengatur nilai awal atribut-atribut objek.
 
-**Referensi:** Ketika kita membuat objek, sebenarnya itu membuat referensi ke objek tersebut. Referensi adalah variabel yang menunjuk ke objek di dalam memori. Ini memungkinkan Anda untuk berinteraksi dengan objek melalui referensi tersebut.
+**Referensi:** Ketika kita membuat objek, sebenarnya itu membuat referensi ke objek tersebut. Referensi adalah variabel yang menunjuk ke objek di dalam memori. Ini memungkinkan kita untuk berinteraksi dengan objek melalui referensi tersebut.
 
 Informasi lengkap mengenai Objek bisa dilihat pada materi pertemuan pertama.
 
 ## Interface dan Abstract Class
+Interface adalah kontrak yang mendefinisikan metode yang harus diimplementasikan oleh kelas-kelas yang menggunakannya. Fungsinya adalah untuk menciptakan standar komunikasi antar kelas tanpa memengaruhi struktur kelas itu sendiri. Abstract class adalah kelas yang tidak dapat diinstansiasi sendiri dan berfungsi sebagai kerangka umum untuk kelas-kelas turunan. Perbedaannya, interface dapat diimplementasikan oleh banyak kelas, sementara abstract class hanya dapat diwarisi oleh satu kelas. Interface memiliki semua metode abstrak, sementara abstract class dapat memiliki metode konkret bersama dengan metode abstrak. Pemilihan tergantung pada kebutuhan desain. Penjelasan lebih lanjut mengenai hal ini akan disampaikan pada pertemuan yang akan datang.
 
 ## Collections
+Collections dalam Java adalah kerangka kerja yang memberikan berbagai kelas dan antarmuka untuk mengelola data dalam bentuk koleksi. Contohnya, ArrayList adalah jenis koleksi yang digunakan untuk menyimpan sejumlah elemen dalam urutan tertentu. Kita dapat menambahkan elemen ke dalamnya, mengakses elemen berdasarkan indeks, atau menghapus elemen dari ArrayList dengan mudah. Collections framework juga menyediakan HashSet yang adalah koleksi untuk menyimpan elemen-elemen unik tanpa urutan tertentu. Misalnya, kita dapat menggunakan HashSet untuk menyimpan daftar nama pengguna unik dalam aplikasi. Dengan bantuan kerangka kerja ini, pengelolaan data dalam aplikasi Java menjadi lebih efisien dan mudah. Penjelasan lebih lanjut mengenai hal ini akan disampaikan pada pertemuan yang akan datang.
 
 ## Enum
+Enum (singkatan dari "enumeration") adalah tipe data khusus di Java yang digunakan untuk mendefinisikan sebuah kumpulan nilai konstan yang terbatas. Enum digunakan untuk menyederhanakan dan memperjelas kode, khususnya saat kita memiliki sekelompok nilai yang tetap dan terbatas yang semestinya memiliki makna khusus.
+
+Berikut ini beberapa hal yang perlu diketahui tentang Enum di Java:
+
+Deklarasi Enum:
+Kita bisa mendeklarasikan sebuah Enum dengan kata kunci enum. Berikut adalah contoh deklarasi Enum yang mendefinisikan hari-hari dalam seminggu:
+
+```java
+enum Hari {
+    SENIN, SELASA, RABU, KAMIS, JUMAT, SABTU, MINGGU
+}
+```  
+
+**Nilai Enum:**
+Nilai-nilai Enum adalah konstanta yang tetap dan telah didefinisikan dalam Enum tersebut. Dalam contoh di atas, SENIN, SELASA, dll., adalah nilai-nilai Enum yang merupakan hari-hari dalam seminggu.
+
+**Mengakses Nilai Enum:**
+Untuk dapat mengakses nilai Enum, gunakan nama Enum diikuti oleh nilai yang diinginkan. Misalnya:
+
+```java
+Hari hariIni = Hari.SENIN;
+```
+
+**Comparing Enum:**
+Kita dapat membandingkan Enum menggunakan operator == karena nilai-nilai Enum adalah konstanta yang unik.
+
+```java
+if (hariIni == Hari.SENIN) {
+    System.out.println("Hari ini adalah Senin.");
+}
+```  
+**Looping Enum:**
+Kita bisa melakukan looping atau iterasi melalui semua nilai Enum menggunakan values().
+
+```java
+for (Hari hari : Hari.values()) {
+    System.out.println(hari);
+}
+```
+
+**Method di Enum:**
+
+Kita dapat menambahkan metode dalam Enum. Contohnya:
+
+```java
+enum Hari {
+    SENIN("Minggu Pertama"), SELASA("Minggu Kedua"), RABU("Minggu Ketiga");
+    
+    private String minggu;
+    
+    private Hari(String minggu) {
+        this.minggu = minggu;
+    }
+    
+    public String getMinggu() {
+        return minggu;
+    }
+}
+```  
+
+Dengan cara ini, setiap nilai Enum memiliki nilai tambahan yang bisa diakses dengan metode getMinggu().
+
+Enum sangat berguna dalam mengurangi kesalahan karena kita hanya dapat memilih dari satu set nilai yang telah ditentukan. Mereka berguna dalam kasus seperti konfigurasi, pengkodean status, atau saat kita memiliki himpunan nilai yang terbatas yang ingin kita wakili dengan cara yang jelas dan bermakna.
 
 ## File
+Di Java, `File` digunakan untuk merepresentasikan berkas atau direktori dalam sistem berkas. Tipe data "File" memungkinkan untuk berinteraksi dengan berkas dan direktori, seperti membaca, menulis, menghapus, atau memeriksa informasi tentang mereka. kita dapat menggunakan kelas-kelas seperti `FileInputStream`, `FileOutputStream`, `FileReader`, dan `FileWriter` untuk mengakses berkas, serta metode-metode yang ada dalam kelas `File` untuk mengelola direktori.
+
+Contoh penggunaan tipe data "File" untuk membaca sebuah berkas:
+
+```java
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class BacaBerkas {
+    public static void main(String[] args) {
+        try {
+            File berkas = new File("contoh.txt");
+            FileReader reader = new FileReader(berkas);
+            int karakter;
+            
+            while ((karakter = reader.read()) != -1) {
+                System.out.print((char) karakter);
+            }
+            
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+Untuk informasi lebih lanjut tentang tipe data "File" dan cara menggunakannya, silakan merujuk ke dokumentasi resmi Java di situs web Oracle:
+
+[Java File Class Documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html)
 
 ## Wrapper Classes
+Wrapper classes adalah kelas-kelas yang ada dalam Java dan digunakan untuk mengenkapsulasi (membungkus) tipe data primitif menjadi objek. Ini memungkinkan tipe data primitif, seperti `int`, `char`, dan `boolean`, untuk berperilaku seperti objek sehingga dapat digunakan dalam konteks yang memerlukan objek, seperti koleksi (collections) atau sebagai argumen dalam pemanggilan metode yang menerima objek.
+
+Berikut beberapa hal penting yang perlu diketahui tentang wrapper classes:
+
+1. **Tipe Data Primitif dan Wrapper Classes**:
+   - `int` memiliki wrapper class `Integer`
+   - `char` memiliki wrapper class `Character`
+   - `boolean` memiliki wrapper class `Boolean`
+   - Dan sebagainya untuk tipe data primitif lainnya.
+
+2. **Autoboxing dan Unboxing**:
+   Java memiliki fitur otomatis untuk mengubah (autobox) tipe data primitif menjadi wrapper class ketika diperlukan dan sebaliknya (unbox) saat diperlukan. Contohnya:
+
+   ```java
+   Integer nilaiInteger = 10; // Autoboxing: int menjadi Integer
+   int nilaiPrimitif = nilaiInteger; // Unboxing: Integer menjadi int
+   ```
+
+3. **Nilai Default**:
+   Nilai default untuk objek wrapper class adalah `null`, sedangkan nilai default untuk tipe data primitif adalah nilai defaultnya masing-masing (misalnya, `0` untuk `int` atau `false` untuk `boolean`).
+
+4. **Manipulasi Data dalam Wrapper Classes**:
+   Kita dapat melakukan operasi matematika atau perbandingan dengan wrapper classes seperti yang kita lakukan dengan tipe data primitif. Sebagai contoh:
+
+   ```java
+   Integer a = 5;
+   Integer b = 10;
+   Integer hasil = a + b; // Operasi penjumlahan
+   boolean sama = a.equals(b); // Memeriksa kesamaan
+   ```
+
+5. **Penggunaan dalam Koleksi**:
+   Wrapper classes sering digunakan dalam koleksi Java, seperti ArrayList, karena koleksi hanya dapat menyimpan objek, bukan tipe data primitif. Jadi, jika kita ingin menyimpan sejumlah `int` dalam ArrayList, kita harus menggunakan `Integer`.
+
+   ```java
+   ArrayList<Integer> daftarAngka = new ArrayList<>();
+   daftarAngka.add(5);
+   daftarAngka.add(10);
+   ```
+
+Wrapper classes sangat berguna dalam banyak situasi dalam pemrograman Java ketika kita perlu menggabungkan tipe data primitif dengan objek. Mereka juga sering digunakan dalam operasi I/O, manipulasi data dalam bentuk objek, dan saat berurusan dengan berbagai kerangka kerja Java yang menggunakan objek daripada tipe data primitif.
+
+# Bacaan Lebih Lanjut
+Berikut ini adalah tautan ke pembahasan lebih lanjut mengenai materi pada bab ini:
+
+1. **Variabel di Java**:
+   - [Dokumentasi Resmi Java - Variable](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
+
+2. **Konstanta**:
+   - [Educative - Java Constant](https://www.educative.io/answers/how-to-declare-constants-in-java)
+
+3. **Tipe Data Primitif**:
+   - [Dokumentasi Resmi Java - Primitive Data Type](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+
+4. **Tipe Data Referensi**:
+   - [Java T Point - Reference Data Type](https://www.javatpoint.com/reference-data-types-in-java)
