@@ -85,7 +85,7 @@ public class Mobil {
     }
 }
 ```  
-Dalam contoh di atas, kita memiliki variabel kelas jumlahMobil yang digunakan untuk melacak jumlah objek Mobil yang telah dibuat. Ketika objek Mobil dibuat menggunakan constructor, nilai yang ada di dalam variabel kelas ini ditambah (++). Kita dapat mengakses variabel kelas dengan menggunakan nama kelas (dalam hal ini, Mobil) diikuti oleh tkita titik. Variabel kelas ini digunakan untuk menyimpan informasi yang bersifat global untuk kelas tersebut dan dapat diakses oleh semua objek yang dibuat dari kelas tersebut.
+Dalam contoh di atas, kita memiliki variabel kelas jumlahMobil yang digunakan untuk melacak jumlah objek Mobil yang telah dibuat. Ketika objek Mobil dibuat menggunakan constructor, nilai yang ada di dalam variabel kelas ini ditambah (++). Kita dapat mengakses variabel kelas dengan menggunakan nama kelas (dalam hal ini, Mobil) diikuti oleh tanda titik. Variabel kelas ini digunakan untuk menyimpan informasi yang bersifat global untuk kelas tersebut dan dapat diakses oleh semua objek yang dibuat dari kelas tersebut.
 
 ## Variabel Lokal
 Variabel ini dideklarasikan di dalam suatu method, blok kode, atau konstruktor, dan hanya dapat diakses di dalam ruang lingkup di mana variabel dideklarasikan. Variabel lokal memiliki batasan dalam hal waktu hidup (scope), yang berarti hanya ada dan dapat diakses saat program berada dalam konteks yang sesuai. Variabel lokal tidak memiliki nilai default dan harus diinisialisasi sebelum digunakan.
@@ -127,7 +127,7 @@ Dalam contoh di atas, tahunProduksi adalah variabel lokal yang hanya terdefinisi
 
 ## Variabel Parameter
 
-Variabel parameter (parameter variables) adalah variabel yang dideklarasikan dalam tkita kurung () saat kita mendefinisikan method atau konstruktor dalam Java. Parameter ini digunakan untuk menerima input atau argumen saat method atau konstruktor dipanggil. Fungsinya sebagai saluran komunikasi antara pemanggil method dan method itu sendiri. Parameter memungkinkan kita untuk memberikan nilai atau data ke method, yang kemudian dapat digunakan di dalamnya.
+Variabel parameter (parameter variables) adalah variabel yang dideklarasikan dalam tanda kurung () saat kita mendefinisikan method atau konstruktor dalam Java. Parameter ini digunakan untuk menerima input atau argumen saat method atau konstruktor dipanggil. Fungsinya sebagai saluran komunikasi antara pemanggil method dan method itu sendiri. Parameter memungkinkan kita untuk memberikan nilai atau data ke method, yang kemudian dapat digunakan di dalamnya.
 
 Contoh penggunaan variabel parameter bisa dilakukan seperti ini:
 
@@ -206,7 +206,7 @@ Dalam pernyataan di atas, modifier `static` menyebabkan variabel tersedia tanpa 
 ## Mengapa perlu ada `static final`?
 Jika kita mendeklarasikan variabel sebagai `static`, semua objek dari kelas (di mana konstanta didefinisikan) akan dapat mengakses variabel tersebut dan dapat mengubah nilainya. Untuk mengatasi masalah ini, perlu menggunakan modifier `final` dengan modifier `static`.
 
-Ketika variabel didefinisikan sebagai `final`, beberapa instansi dari nilai konstan yang sama akan dibuat untuk setiap objek yang berbeda, yang tidak diinginkan.
+Ketika variabel didefinisikan sebagai `final`, beberapa instansi dari nilai konstan yang sama akan dibuat untuk setiap objek yang berbeda.
 
 Ketika menggunakan modifier `static` dan `final` bersama-sama, variabel tetap menjadi statis dan dapat diinisialisasi sekali. Oleh karena itu, untuk mendeklarasikan variabel sebagai konstan, digunakanlah modifier `static` dan `final`. Jadi, semua objek kelas akan berbagi lokasi memori yang sama (dalam hal mengakses konstanta).
 
@@ -308,9 +308,9 @@ Selain ke-empat modifier tersebut, terdapat juga non-access modifier yaitu `stat
 | Jenis Tipe Data | Deskripsi                                                        | Rentang Nilai                                    | Contoh Nilai                        |
 |-----------------|------------------------------------------------------------------|--------------------------------------------------|-------------------------------------|
 | boolean         | Menyimpan nilai dengan dua status: benar atau salah              | true, false                                      | true, false (tidak boleh 0 atau 1)  |
-| char            | Menyimpan karakter tunggal, dikelilingi oleh tkita kutip tunggal | '\u0000' s/d '\uffff'                            | 'A', '1'                            |
+| char            | Menyimpan karakter tunggal, dikelilingi oleh tanda kutip tunggal | '\u0000' s/d '\uffff'                            | 'A', '1'                            |
 | byte            | Menyimpan bilangan bulat tanpa desimal                           | -128 s/d 127                                     | 123, -55                            |
-| short           | Menyimpan karakter tunggal, dikelilingi oleh tkita kutip tunggal | -32768 s/d 32767                                 | -345, 5435                          |
+| short           | Menyimpan karakter tunggal, dikelilingi oleh tanda kutip tunggal | -32768 s/d 32767                                 | -345, 5435                          |
 | int             | Menyimpan bilangan bulat tanpa desimal                           | -2147483648 s/d 2147483647                       | -49224253, 3132953                  |
 | long            | Menyimpan bilangan bulat tanpa desimal                           | -9223372036854775808 s/d 9223372036854775807     | -4242313243L, 5342231435L           |
 | float           | Menyimpan angka titik mengambang dengan desimal                  | 1.4E-45 s/d 3.4028235E38                         | 1.45F, 598.67F                      |
