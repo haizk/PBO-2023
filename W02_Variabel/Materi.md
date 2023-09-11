@@ -334,4 +334,140 @@ public class TipeDataContoh {
 
 # Reference Data Type
 
+## String
+String adalah tipe data dalam bahasa pemrograman Java yang digunakan untuk merepresentasikan teks atau rangkaian karakter. String di Java adalah objek, bukan tipe data primitif seperti int atau float. Ini berarti bahwa kita dapat menggunakan berbagai metode dan operasi yang disediakan oleh kelas String untuk memanipulasi teks.
 
+Berikut beberapa hal penting yang perlu diketahui tentang String di Java:
+
+### Deklarasi dan Inisialisasi
+Untuk mendeklarasikan dan menginisialisasi String, salah satunya adalah dengan langsung menetapkan nilai string ke dalamnya, misalnya:
+```java
+String nama = "UNS";
+```  
+Selain itu, kita juga dapat membuat objek String dengan menggunakan konstruktor, seperti:
+
+```java
+String alamat = new String("Jl. Ir Sutami No.36, Kentingan, Kec. Jebres, Kota Surakarta, Jawa Tengah 57126");
+```
+
+### Immutable
+String di Java bersifat immutable, yang berarti setelah membuat sebuah String, kita tidak dapat mengubah nilai karakternya. Jika kita melakukan operasi yang memodifikasi String, seperti penggabungan (concatenation) atau pemotongan (substring), maka akan dibuat String baru sebagai hasilnya.
+
+Di dalam Java, kita bisa melakukan operasi String seperti penggabungan, membagi karakter, perbandingan, konversi nilai, dan sebagainya. Ada juga konsep String "pool". Hal-hal lebih detail mengenai hal ini akan dibahas di pertemuan-pertemuan selanjutnya.
+
+## Array
+Array adalah struktur data yang digunakan untuk menyimpan kumpulan elemen dengan tipe data yang sama di dalam bahasa pemrograman Java. Array adalah objek dalam Java dan memiliki beberapa karakteristik penting:
+
+1. **Deklarasi dan Inisialisasi Array**:  
+   kita dapat mendeklarasikan dan menginisialisasi array dalam Java dengan cara berikut:
+
+   - **Deklarasi**: Menentukan tipe data elemen array dan nama array.
+   
+     ```java
+     TipeData[] namaArray;
+     ```
+
+   - **Inisialisasi dengan ukuran tertentu**:
+   
+     ```java
+     TipeData[] namaArray = new TipeData[ukuran];
+     ```
+
+     Contoh:
+
+     ```java
+     int[] angka = new int[5]; // Membuat array integer dengan 5 elemen
+     ```
+
+   - **Inisialisasi dengan nilai awal**:
+   
+     ```java
+     TipeData[] namaArray = {nilai1, nilai2, nilai3, ...};
+     ```
+
+     Contoh:
+
+     ```java
+     String[] hari = {"Senin", "Selasa", "Rabu", "Kamis", "Jumat"};
+     ```
+
+2. **Indeks Array**:
+   Indeks array dimulai dari 0, yang berarti elemen pertama memiliki indeks 0, elemen kedua memiliki indeks 1, dan seterusnya. kita dapat mengakses elemen array dengan menggunakan indeksnya.
+
+   Contoh:
+
+   ```java
+   int[] angka = {10, 20, 30, 40, 50};
+   int nilaiPertama = angka[0]; // Mengambil nilai pertama (10)
+   int nilaiKedua = angka[1];   // Mengambil nilai kedua (20)
+   ```
+
+3. **Panjang Array**:
+   kita dapat mengetahui panjang atau jumlah elemen dalam array dengan menggunakan properti `length`.
+
+   Contoh:
+
+   ```java
+   int[] angka = {10, 20, 30, 40, 50};
+   int panjangArray = angka.length; // Panjang array adalah 5
+   ```
+
+4. **Array Multidimensi**:
+   Java juga mendukung array multidimensi, seperti array 2D (matriks) dan array 3D. Ini memungkinkan kita untuk menyimpan data dalam bentuk tabel atau kumpulan tabel.
+
+   Contoh array 2D:
+
+   ```java
+   int[][] matriks = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+   ```
+
+5. **Looping Melalui Array**:
+   kita dapat menggunakan loop, seperti `for` atau `foreach`, untuk mengakses dan memanipulasi setiap elemen dalam array.
+
+   Contoh:
+
+   ```java
+   int[] angka = {10, 20, 30, 40, 50};
+   for (int i = 0; i < angka.length; i++) {
+       System.out.println(angka[i]);
+   }
+   ```
+
+6. **Array sebagai Parameter dan Hasil dari Metode**:
+   kita dapat menggunakan array sebagai parameter untuk metode dan mengembalikan array dari metode. Ini memungkinkan kita untuk mengorganisasi kode kita dengan lebih baik dan menghindari pengulangan yang tidak perlu.
+
+   Contoh:
+
+   ```java
+   public static int[] tambahDua(int[] array) {
+       for (int i = 0; i < array.length; i++) {
+           array[i] += 2;
+       }
+       return array;
+   }
+   ```  
+
+## Objek
+Objek adalah salah satu konsep paling fundamental dalam bahasa pemrograman Java. Ini adalah instance (wujud nyata) dari kelas, dan sebagian besar kode Java ditulis dalam konteks objek. Berikut adalah beberapa poin penting terkait objek di Java:
+
+**Instance:** Ketika membuat objek dari sebuah kelas, itu artinya kita membuat instance (wujud nyata) dari kelas tersebut. Misalnya, jika kita membuat objek `mobilMerah` dari kelas `Mobil`, `mobilMerah` adalah sebuah instance dari kelas `Mobil`.
+
+**Atribut:** Atribut adalah variabel yang menyimpan data untuk objek. Setiap objek memiliki nilai yang berbeda untuk atribut-atributnya. Misalnya, objek `mobilMerah` mungkin memiliki atribut warna dengan nilai "merah" dan atribut merek dengan nilai `"Supreme"`.
+
+**Metode:** Metode adalah fungsi atau tindakan yang dapat dilakukan oleh objek. Metode digunakan untuk mengakses atau memanipulasi atribut objek atau untuk menjalankan operasi tertentu. Contohnya, objek `mobilMerah` dapat memiliki metode `start()` untuk memulai mesin mobil.
+
+**Inisialisasi:** Objek biasanya diinisialisasi menggunakan konstruktor kelas. Konstruktor adalah metode khusus yang dipanggil saat objek dibuat. Ini digunakan untuk mengatur nilai awal atribut-atribut objek.
+
+**Referensi:** Ketika kita membuat objek, sebenarnya itu membuat referensi ke objek tersebut. Referensi adalah variabel yang menunjuk ke objek di dalam memori. Ini memungkinkan Anda untuk berinteraksi dengan objek melalui referensi tersebut.
+
+Informasi lengkap mengenai Objek bisa dilihat pada materi pertemuan pertama.
+
+## Interface dan Abstract Class
+
+## Collections
+
+## Enum
+
+## File
+
+## Wrapper Classes
