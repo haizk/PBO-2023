@@ -275,6 +275,34 @@ public class ConstantExample3 {
 }
 ```
 
+# Access Modifier
+
+Terdapat banyak access modifier di Java yang dimaksudkan untuk melindungi variable atau method tertentu dari sebuah class. Perlindungan ini dimaksudkan agar akses kedalam sebuah class menjadi lebih terawasi. Adapun bentuk modifier tersebut adalah:
+
+## Daftar Akses Modifier
+
+| No. | Modifier   | Pada class dan interface                     | Pada method dan variable                                                                         |
+| --- | ---------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| 1.  | Default    | Dapat diakses oleh class dalam satu package. | Dapat diakses oleh class dalam satu package dan dapat diakses oleh method dalam satu kelas.      |
+| 2.  | Public     | Dapat diakses oleh class manapun             | Dapat diakses oleh class dalam package manapun dan dapat diakses oleh method dari class manapun. |
+| 3.  | Protected  | Dapat class turunan                          | Dapat diakses oleh class turunannya dan method yang dalam satu package.                          |
+| 4.  | Private    | Tidak dapat diakses oleh class lain.         | Hanya dapat diakses oleh class itu sendiri.                                                      |
+
+Secara garis besar, bentuk perlindungan dalam hak akses tersebut dapat dilihat sebagai berikut:
+
+## Perbedaan dan persamaan aksesibilitas pada Java
+
+| Aksesibilitas                | public | private | protected | default  |
+| ---------------------------- | ------ | ------- | --------- | -------- |
+| Class yang sama              | ✔      | ✔      | ✔         | ✔       |
+| Class manapun                | ✔      | ❌     | ✔         | ✔       |
+| Class dalam satu package     | ✔      | ❌     | ❌        | ❌      |
+| Sub-class dalam satu package | ✔      | ❌     | ✔         | ✔       |
+| Sub-class dari package lain  | ✔      | ❌     | ✔         | ❌      |
+
+Selain ke-empat modifier tersebut, terdapat juga non-access modifier yaitu `static`, `abstract`, `synchronized`, `native`, `volatile`, `transient`, dan sebagainya. Non-access modifier selain `static` ini tidak dibahas pada materi ini.
+
+
 # Primitive Data Type
 
 | Jenis Tipe Data | Deskripsi                                                        | Rentang Nilai                                    | Contoh Nilai                        |
