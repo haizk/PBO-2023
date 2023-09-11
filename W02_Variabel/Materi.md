@@ -290,7 +290,7 @@ public class ConstantExample3 {
 
 Mungkin kalian bertanya-tanya, mengapa String tidak termasuk di tabel ini? Dalam Java, String adalah tipe data yang unik karena sebenarnya merupakan objek. Java memungkinkan penggunaan string dengan cara yang mirip dengan tipe data primitif. Kita dapat membuat string tanpa harus secara eksplisit membuat objek String. Hal ini disebut dengan "string literal" dan memungkinkan penggunaan method-method dari kelas String dengan mudah. Sehingga, meskipun String sebenarnya adalah objek, Java memiliki cara khusus untuk memperlakukannya sebagai tipe data yang lebih mudah digunakan.
 
-Contoh penggunaan reference data type bisa dilihat di kode berikut.
+Contoh penggunaan primitive data type bisa dilihat di kode berikut.
 ```java
 public class TipeDataContoh {
     public static void main(String[] args) {
@@ -319,9 +319,6 @@ public class TipeDataContoh {
         // Tipe data double
         double angkaDouble = 3.14159265359;
 
-        // Tipe data String
-        String kata = "Contoh String";
-
         // Menampilkan nilai dari masing-masing variabel
         System.out.println("Tipe data boolean: " + nilaiBenar + " dan " + nilaiSalah);
         System.out.println("Tipe data char: " + karakter);
@@ -331,9 +328,10 @@ public class TipeDataContoh {
         System.out.println("Tipe data long: " + angkaLong);
         System.out.println("Tipe data float: " + angkaFloat);
         System.out.println("Tipe data double: " + angkaDouble);
-        System.out.println("Tipe data String: " + kata);
     }
 }
 ```  
 
 # Reference Data Type
+
+
