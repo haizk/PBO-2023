@@ -284,10 +284,56 @@ public class ConstantExample3 {
 | byte            | Menyimpan bilangan bulat tanpa desimal                           | -128 s/d 127                                     | 123, -55                            |
 | short           | Menyimpan karakter tunggal, dikelilingi oleh tkita kutip tunggal | -32768 s/d 32767                                 | -345, 5435                          |
 | int             | Menyimpan bilangan bulat tanpa desimal                           | -2147483648 s/d 2147483647                       | -49224253, 3132953                  |
-| long            | Menyimpan bilangan bulat tanpa desimal                           | -9223372036854775808 s/d 9223372036854775807     | -4242313243, 5342231435             |
+| long            | Menyimpan bilangan bulat tanpa desimal                           | -9223372036854775808 s/d 9223372036854775807     | -4242313243L, 5342231435L           |
 | float           | Menyimpan angka titik mengambang dengan desimal                  | 1.4E-45 s/d 3.4028235E38                         | 1.45F, 598.67F                      |
 | double          | Menyimpan angka titik mengambang dengan desimal                  | 4.9E-324 s/d 1.7976931348623157E308              | 0.4556, 132435.05833                |
 
 Mungkin kalian bertanya-tanya, mengapa String tidak termasuk di tabel ini? Dalam Java, String adalah tipe data yang unik karena sebenarnya merupakan objek. Java memungkinkan penggunaan string dengan cara yang mirip dengan tipe data primitif. Kita dapat membuat string tanpa harus secara eksplisit membuat objek String. Hal ini disebut dengan "string literal" dan memungkinkan penggunaan method-method dari kelas String dengan mudah. Sehingga, meskipun String sebenarnya adalah objek, Java memiliki cara khusus untuk memperlakukannya sebagai tipe data yang lebih mudah digunakan.
+
+Contoh penggunaan reference data type bisa dilihat di kode berikut.
+```java
+public class TipeDataContoh {
+    public static void main(String[] args) {
+        // Tipe data boolean
+        boolean nilaiBenar = true;
+        boolean nilaiSalah = false;
+
+        // Tipe data char
+        char karakter = 'A';
+
+        // Tipe data byte
+        byte angkaByte = 100;
+
+        // Tipe data short
+        short angkaShort = 1000;
+
+        // Tipe data int
+        int angkaInt = 100000;
+
+        // Tipe data long
+        long angkaLong = 1000000000L; // Perhatikan penambahan 'L' untuk literal long
+
+        // Tipe data float
+        float angkaFloat = 3.14f; // Perhatikan penambahan 'f' untuk literal float
+
+        // Tipe data double
+        double angkaDouble = 3.14159265359;
+
+        // Tipe data String
+        String kata = "Contoh String";
+
+        // Menampilkan nilai dari masing-masing variabel
+        System.out.println("Tipe data boolean: " + nilaiBenar + " dan " + nilaiSalah);
+        System.out.println("Tipe data char: " + karakter);
+        System.out.println("Tipe data byte: " + angkaByte);
+        System.out.println("Tipe data short: " + angkaShort);
+        System.out.println("Tipe data int: " + angkaInt);
+        System.out.println("Tipe data long: " + angkaLong);
+        System.out.println("Tipe data float: " + angkaFloat);
+        System.out.println("Tipe data double: " + angkaDouble);
+        System.out.println("Tipe data String: " + kata);
+    }
+}
+```  
 
 # Reference Data Type
