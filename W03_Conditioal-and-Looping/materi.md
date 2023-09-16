@@ -166,12 +166,12 @@ Pada pertemuan kali ini kita sudah mempelajari tentang kondisional, looping sert
 
 ## Referensi dan Bacaan Lain
 1. **Kondisional dalam Java**:
-[Java If Else | W3Schools](https://www.w3schools.com/java/java_conditions.asp)
-[Java Ternary Operator | W3Schools](https://www.w3schools.com/java/java_conditions_shorthand.asp)
-[Java Switch Case | W3Schools](https://www.w3schools.com/java/java_switch.asp)
+    - [Java If Else | W3Schools](https://www.w3schools.com/java/java_conditions.asp)
+    - [Java Ternary Operator | W3Schools](https://www.w3schools.com/java/java_conditions_shorthand.asp)
+    - [Java Switch Case | W3Schools](https://www.w3schools.com/java/java_switch.asp)
 2. **Looping dalam Java**:
-[Java While Loop | W3Schools](https://www.w3schools.com/java/java_while_loop.asp)
-[Java For Loop | W3Schools](https://www.w3schools.com/java/java_for_loop.asp)
-[Java Foreach Loop | W3Schools](https://www.w3schools.com/java/java_foreach_loop.asp)
+    - [Java While Loop | W3Schools](https://www.w3schools.com/java/java_while_loop.asp)
+    - [Java For Loop | W3Schools](https://www.w3schools.com/java/java_for_loop.asp)
+    - [Java Foreach Loop | W3Schools](https://www.w3schools.com/java/java_foreach_loop.asp)
 3. **Break dan Continue dalam Java**
-[Java Break and Continue | W3Schools](https://www.w3schools.com/java/java_break.asp)
+    - [Java Break and Continue | W3Schools](https://www.w3schools.com/java/java_break.asp)
