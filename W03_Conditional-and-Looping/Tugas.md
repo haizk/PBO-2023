@@ -17,4 +17,4 @@ Setelah menerima input maka user bisa memilih ingin melihat buah atau sayur apa 
 3. **Buatlah method AddBuah dan AddSayur (Gunakan COnditional)** : Kedua method ini digunakan untuk menambahkan input kedalam array buah/sayur jika input valid.
 4. **Buatlah method PrintBuah dan PrintSayur (Gunakan Looping Untuk Membaca Isi Array)** : Kedua method ini digunakan jika user telah selesai memasukkan input dan ingin melihat list Buah atau Sayur yang telah di inputkan
 
-Format penulisan nama file adalah **PPBO_03_NIM.java** jika terdapat lebih dari 1 file maka **JANGAN DI ZIP** kumpulkan saja semua file di classroom.
+Format penulisan nama file adalah **PPBO_03_NIM_Nama.java** jika terdapat lebih dari 1 file maka **JANGAN DI ZIP** kumpulkan saja semua file di classroom.
