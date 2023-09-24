@@ -38,9 +38,11 @@ throws | Keyword `throws` digunakan untuk mendeklarasikan exception. Hal ini mem
 
 ## Hirarki dan Tipe dari Exception Class
 Class java.lang.Throwable adalah root class dari `exception` yang diwarisi oleh dua subclass: `Exception` dan `Error`. Hierarki dari class Exception adalah sebagai berikut (tidak semua terlampir):
+
 ![Hirarki dari Exception Class](image.png)
 
 Java mendefinisikan beberapa jenis exception yang berhubungan dengan berbagai class libraries. Java juga memungkinkan pengguna untuk men-define exception mereka sendiri.
+
 ![Tipe dari Exception Class](image-1.png)
 
 ## Method dari Exception Class
@@ -54,6 +56,7 @@ Java mendefinisikan beberapa jenis exception yang berhubungan dengan berbagai cl
 
 ## Contoh Kasus
 Kasus di bawah adalah apabila kita melakukan pembagian dengan 0:
+
 ```java
 public class JavaExceptionExample{  
     public static void main(String args[]){  
@@ -67,20 +70,49 @@ public class JavaExceptionExample{
     }  
 }
 ```
+
 Output:
+
 ```
 java.lang.ArithmeticException: / by zero
+rest of the code...
+```
+
+Kasus di bawah adalah apabila kita mengakses array di luar indeks yang tersedia:
+
+```java
+public class JavaExceptionExample{  
+    public static void main(String args[]){  
+        try{  //kode yang mungkin ada exception
+            int a[]=new int[5];  
+            a[10]=50; //ArrayIndexOutOfBoundsException
+        } catch(ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+        }  
+        //kode lainnya yang akan dijalankan   
+        System.out.println("rest of the code...");  
+    }  
+}
+```
+
+Output:
+
+```
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 5
 rest of the code...
 ```
 
 # Assertion 
 
 # Baca Lebih Lanjut
-https://docs.oracle.com/javase%2Ftutorial%2F/essential/exceptions/index.html
-https://www.geeksforgeeks.org/exceptions-in-java/
-https://www.w3schools.com/java/java_try_catch.asp
-https://www.javatpoint.com/exception-handling-in-java
-https://www.javatpoint.com/exception-class-in-java
-https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html
-https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html
-https://www.javatpoint.com/custom-exception
+1. **Exceptions**:
+   - [Lesson: Exceptions (The Java™ Tutorials > Essential Java Classes) - Oracle](https://docs.oracle.com/javase%2Ftutorial%2F/essential/exceptions/index.html)
+   - [Exceptions in Java - GeeksforGeeks](https://www.geeksforgeeks.org/exceptions-in-java/)
+   - [Java Exceptions - W3Schools](https://www.w3schools.com/java/java_try_catch.asp)
+   - [Exception Handling in Java - javatpoint](https://www.javatpoint.com/exception-handling-in-java)
+   - [Exception Class in Java - javatpoint](https://www.javatpoint.com/exception-class-in-java)
+   - [Throwable (Java Platform SE 7) - Oracle](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html)
+   - [Object (Java Platform SE 7) - Oracle](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html)
+   - [Java Custom Exception - javatpoint](https://www.javatpoint.com/custom-exception)
+2. **Assertions**:
+   - asd
