@@ -163,7 +163,42 @@ Exception in thread "main" java.lang.AssertionError:  Not valid
         at haizk.Main.main(Main.java:11)
 ```
 
-Akan muncul exception dan diberi keterangan `Not valid` di mana hal itu adalah `expression 2` pada syntax `assert expression 1 : expression 2;`.
+Akan muncul exception dan diberi keterangan `Not valid` di mana hal itu adalah `expression 2` pada syntax `assert expression 1 : expression 2;`. Berikut adalah contoh penggabungan dengan `exception handling`:
+
+```java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        try {
+            Scanner scanner = new Scanner( System.in );  
+            System.out.print("Enter your age: ");  
+                
+            int value = scanner.nextInt();  
+            assert value>=18:" Not valid";  
+            
+            System.out.println("Your age is "+value);
+            scanner.close();
+        } catch (AssertionError e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        System.out.println("Bye");
+    }
+}
+```
+
+```java
+Enter your age: 15
+Error:  Not valid
+Bye
+```
+
+Output di atas adalah apabila user menginput value < 18. Apabila user menginput value >= 18, maka outputnya adalah:
+
+```java
+Enter your age: 20
+Your age is 20
+Bye
+```
 
 # Baca Lebih Lanjut
 1. **Exceptions**:
