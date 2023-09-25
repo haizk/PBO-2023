@@ -1,5 +1,5 @@
 # Exception
-Arti Kamus: `Exception` adalah kondisi abnormal.
+Arti kamus: `Exception` adalah kondisi abnormal.
 
 Dalam bahasa Java, `exception` adalah kejadian yang tidak diinginkan atau tidak terduga, yang terjadi selama eksekusi suatu program, yaitu pada saat runtime, yang mengganggu keberjalanan program. `Exception` dapat ditangkap dan ditangani oleh program. Ketika `exception` terjadi dalam suatu method, maka akan menciptakan sebuah objek. Objek ini disebut objek `exception`. Objek ini berisi informasi tentang `exception`, seperti nama dan deskripsi `exception` serta status program saat `exception` terjadi.
 
