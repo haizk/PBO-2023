@@ -102,7 +102,68 @@ java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 5
 rest of the code...
 ```
 
-# Assertion 
+# Assertion
+Sebuah `assertion` dapat menguji kebenaran dari asumsi yang sudah dibuat dalam program. Untuk menggunakan `assertion`, digunakan keyword `assert` dalam bahasa Java. Ketika menjalankan `assertion`, pernyataan tersebut diyakini bernilai benar (_true_). Apabila pernyataan tersebut ternyata salah, JVM akan melempar (_throws_) error bernama AssertionError. `Assertion` biasa digunakan untuk testing ketika melakukan development.
+
+Untuk menggunakan keyword `assert`, dapat menggunakan 2 cara:
+```java
+assert expression; //cara 1
+assert expression1 : expression2; //cara 2
+```
+
+Secara default, `assertion` diatur menjadi disabled. Berikut adalah cara mengaktifkannya, jalankan `java –ea <nama file>` atau `java -enableassertions <nama file>` di terminal.
+
+## Contoh Kasus
+```java
+public class Main {
+    public static void main(String[] args) {
+        assert false:"Contoh assertion!";
+    }
+}
+```
+
+Apabila assertion diatur menjadi disabled, maka tidak akan muncul output apapun. Namun, apabila diaktifkan, berikut adalah outputnya:
+
+```
+Exception in thread "main" java.lang.AssertionError: Contoh assertion!
+        at haizk.Main.main(Main.java:5)
+```
+
+`haizk.Main.main` adalah tempat di mana method ditempatkan, akan berubah-ubah sesuai dengan lokasi file.
+
+```java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner( System.in );  
+        System.out.print("Enter your age: ");  
+            
+        int value = scanner.nextInt();  
+        assert value>=18:" Not valid";  
+        
+        System.out.println("Your age is "+value);  
+        scanner.close();
+    }
+}
+```
+
+Contoh di atas adalah contoh yang lebih nyata. Program akan meminta user untuk menginput angka, apabila user menginput value >= 18, misal 20:
+
+```
+Enter your age: 20
+Your age is 20
+```
+
+Program akan berjalan secara normal. Apabila user menginput value < 18, misal 15:
+
+```
+Enter your age: 15
+Exception in thread "main" java.lang.AssertionError:  Not valid
+        at haizk.Main.main(Main.java:11)
+```
+
+Akan muncul exception dan diberi keterangan `Not valid` di mana hal itu adalah `expression 2` pada syntax `assert expression 1 : expression 2;`.
 
 # Baca Lebih Lanjut
 1. **Exceptions**:
@@ -115,4 +176,8 @@ rest of the code...
    - [Object (Java Platform SE 7) - Oracle](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html)
    - [Java Custom Exception - javatpoint](https://www.javatpoint.com/custom-exception)
 2. **Assertions**:
-   - asd
+   - [Java Assertion - javatpoint](https://www.javatpoint.com/assertion-in-java)
+   - [Assertions in Java - GeeksforGeeks](https://www.geeksforgeeks.org/assertions-in-java/)
+   - [How to use assertions in Java - InfoWorld](https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html)
+   - [Java Assertions - Programiz](https://www.programiz.com/java-programming/assertions)
+   - [Programming With Assertions - Oracle](https://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#:~:text=An%20assertion%20is%20a%20statement,than%20the%20speed%20of%20light.)
