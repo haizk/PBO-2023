@@ -210,6 +210,7 @@ Bye
    - [Throwable (Java Platform SE 7) - Oracle](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html)
    - [Object (Java Platform SE 7) - Oracle](https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html)
    - [Java Custom Exception - javatpoint](https://www.javatpoint.com/custom-exception)
+   - [throw and throws in Java - GeeksforGeeks](https://www.geeksforgeeks.org/throw-throws-java/)
 2. **Assertions**:
    - [Java Assertion - javatpoint](https://www.javatpoint.com/assertion-in-java)
    - [Assertions in Java - GeeksforGeeks](https://www.geeksforgeeks.org/assertions-in-java/)
