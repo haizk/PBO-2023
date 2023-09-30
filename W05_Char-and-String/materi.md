@@ -38,8 +38,62 @@ Contoh penggunaan :
 String firstName = "John";
 String lastName = "Doe";
 String fullName = firstName + " " + lastName;
-
 ```
+Saat Anda perlu melakukan banyak operasi manipulasi string, penggunaan penggabungan String dengan operator + bisa menjadi tidak efisien karena pembuatan objek baru. Dalam kasus seperti itu, Anda dapat menggunakan StringBuilder atau StringBuffer untuk membuat dan memodifikasi string secara efisien. Keduanya mirip dalam fungsionalitas, tetapi memiliki perbedaan utama: StringBuilder tidak bersifat thread-safe, sedangkan StringBuffer bersifat thread-safe.\n
+Contoh penggunaan stringBuilder :
+```java
+// Inisialisasi StringBuilder
+StringBuilder builder = new StringBuilder();
+
+// Menambahkan teks ke dalam StringBuilder
+builder.append("Hello");
+
+// Menambahkan karakter atau string
+builder.append(' ');
+
+// Menambahkan lebih banyak teks
+builder.append("World!");
+
+// Mengganti karakter di indeks tertentu
+builder.setCharAt(0, 'h');
+
+// Menghapus karakter pada indeks tertentu
+builder.deleteCharAt(6);
+
+// Mengubah StringBuilder menjadi String
+String result = builder.toString();
+
+System.out.println(result); // Output: "hello World!"
+```
+StringBuilder lebih efisien saat Anda perlu memanipulasi string secara berulang dalam satu thread, seperti dalam pengulangan atau saat menggabungkan banyak string.
+
+Contoh penggunaan stringBuffer :
+```java
+// Inisialisasi StringBuffer
+StringBuffer buffer = new StringBuffer();
+
+// Menambahkan teks ke dalam StringBuffer
+buffer.append("Hello");
+
+// Menambahkan karakter atau string
+buffer.append(' ');
+
+// Menambahkan lebih banyak teks
+buffer.append("World!");
+
+// Mengganti karakter di indeks tertentu
+buffer.setCharAt(0, 'h');
+
+// Menghapus karakter pada indeks tertentu
+buffer.deleteCharAt(6);
+
+// Mengubah StringBuffer menjadi String
+String result = buffer.toString();
+
+System.out.println(result); // Output: "hello World!"
+```
+StringBuffer, meskipun sedikit lebih lambat dalam penggunaan tunggal, berguna dalam lingkungan multithread karena bersifat thread-safe, sehingga dapat digunakan secara aman dalam konteks bersamaan oleh beberapa thread.
+
 ## String Method
 Di bahasa pemrograman Java terdapat beberapa build-in method pada String Class yang dapat membantu kita dalam memproses informasi dari String.
 Berikut beberapa contoh String Method :
