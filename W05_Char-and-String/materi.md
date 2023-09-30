@@ -5,6 +5,7 @@ Character (char) adalah salah satu type data primitive yang umum terdapat di ber
 
 ## Char Declaration
 Character dideklarasikan dengan menggunakan single quotes('').
+
 Contoh penggunaan :
 
 ```java
@@ -20,12 +21,14 @@ String merupakan sebuah nilai tunggal yang berisikan kumpulan dari character.
 
 ## String Declaration
 String di deklarasikan dengan menggunakan double quotes("").
+
 Contoh penggunaan :
 
 ```java
 String str = "Hello World";
 ```
 Selain itu kita juga dapat membuat String dengan menggunakan keyword "new". Tetapi hal ini jarang digunakan.
+
 Contoh penggunaan :
 ```java
 String anotherString = new String("Hello");
@@ -39,7 +42,8 @@ String firstName = "John";
 String lastName = "Doe";
 String fullName = firstName + " " + lastName;
 ```
-Saat Anda perlu melakukan banyak operasi manipulasi string, penggunaan penggabungan String dengan operator + bisa menjadi tidak efisien karena pembuatan objek baru. Dalam kasus seperti itu, Anda dapat menggunakan StringBuilder atau StringBuffer untuk membuat dan memodifikasi string secara efisien. Keduanya mirip dalam fungsionalitas, tetapi memiliki perbedaan utama: StringBuilder tidak bersifat thread-safe, sedangkan StringBuffer bersifat thread-safe.\n
+Saat Anda perlu melakukan banyak operasi manipulasi string, penggunaan penggabungan String dengan operator + bisa menjadi tidak efisien karena pembuatan objek baru. Dalam kasus seperti itu, Anda dapat menggunakan StringBuilder atau StringBuffer untuk membuat dan memodifikasi string secara efisien. Keduanya mirip dalam fungsionalitas, tetapi memiliki perbedaan utama: StringBuilder tidak bersifat thread-safe, sedangkan StringBuffer bersifat thread-safe.
+
 Contoh penggunaan stringBuilder :
 ```java
 // Inisialisasi StringBuilder
