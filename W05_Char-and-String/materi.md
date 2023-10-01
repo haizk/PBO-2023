@@ -191,19 +191,19 @@ Metharacters adalah characters yang memiliki arti tersendiri.
 
 Berikut contoh dari metacharacter yang dapat digunakan untuk pembuatan sebuah pattern:
 
-|	    : Find a match for any one of the patterns separated by | as in: cat|dog|fish
+`|`	    : Find a match for any one of the patterns separated by | as in: cat|dog|fish
 
-.	    : Find just one instance of any character
+`.`	    : Find just one instance of any character
 
-^	    : Finds a match as the beginning of a string as in: ^Hello
+`^`	    : Finds a match as the beginning of a string as in: ^Hello
 
-$	    : Finds a match at the end of the string as in: World$
+`$`	    : Finds a match at the end of the string as in: World$
 
-\d	    : Find a digit
+`\d`	    : Find a digit
 
-\s	    : Find a whitespace character
+`\s`	    : Find a whitespace character
 
-\b	    : Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
+`\b`	    : Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
 
 \uxxxx	:Find the Unicode character specified by the hexadecimal number xxxx
 
