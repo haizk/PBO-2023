@@ -200,19 +200,18 @@ $	    : Finds a match at the end of the string as in: World$
 
 ### 5.3.2.2 Quantifiers
 Quantifiers dalam pembuatan pola (pattern) dalam ekspresi reguler digunakan untuk mengontrol berapa kali sebuah karakter atau grup karakter tertentu harus muncul dalam string yang dicocokkan. Berikut adalah beberapa quantifier yang umum digunakan dalam ekspresi reguler:
-1. *    : Quantifier * mengindikasikan bahwa karakter atau grup karakter sebelumnya dapat muncul 0 kali atau lebih. Misalnya, a* akan cocok dengan string kosong, "a", "aa", "aaa", dan seterusnya.
+1. '*'       : Quantifier '*' mengindikasikan bahwa karakter atau grup karakter sebelumnya dapat muncul 0 kali atau lebih. Misalnya, a* akan cocok dengan string kosong, "a", "aa", "aaa", dan seterusnya.
 
-2. +    : Quantifier + mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul setidaknya satu kali atau lebih. Misalnya, a+ akan cocok dengan "a", "aa", "aaa", dan seterusnya, tetapi tidak akan cocok dengan string kosong.
+2. '+'       : Quantifier + mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul setidaknya satu kali atau lebih. Misalnya, a+ akan cocok dengan "a", "aa", "aaa", dan seterusnya, tetapi tidak akan                  cocok dengan string kosong.
 
-3. ?    : Quantifier ? mengindikasikan bahwa karakter atau grup karakter sebelumnya dapat muncul 0 kali atau tepat 1 kali. Misalnya, a? akan cocok dengan string kosong atau "a", tetapi tidak akan cocok dengan "aa".
+3. ?        : Quantifier ? mengindikasikan bahwa karakter atau grup karakter sebelumnya dapat muncul 0 kali atau tepat 1 kali. Misalnya, a? akan cocok dengan string kosong atau "a", tetapi tidak akan cocok dengan "aa".
 
-4. {n}  : Quantifier {n} mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul tepat n kali. Misalnya, a{3} akan cocok dengan "aaa" tetapi tidak akan cocok dengan "aa" atau "a".
+4. {n}      : Quantifier {n} mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul tepat n kali. Misalnya, a{3} akan cocok dengan "aaa" tetapi tidak akan cocok dengan "aa" atau "a".
 
-5. {n,} : Quantifier {n,} mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul setidaknya n kali atau lebih. Misalnya, a{2,} akan cocok dengan "aa", "aaa", "aaaa", dan seterusnya.
+5. {n,}     : Quantifier {n,} mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul setidaknya n kali atau lebih. Misalnya, a{2,} akan cocok dengan "aa", "aaa", "aaaa", dan seterusnya.
 
-{n,m}: Quantifier {n,m} mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul setidaknya n kali dan paling banyak m kali. Misalnya, a{2,4} akan cocok dengan "aa", "aaa", atau "aaaa", tetapi tidak akan cocok dengan "a" atau "aaaaa".
+6. {n,m}    : Quantifier {n,m} mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul setidaknya n kali dan paling banyak m kali. Misalnya, a{2,4} akan cocok dengan "aa", "aaa", atau "aaaa", tetapi                  tidak akan cocok dengan "a" atau "aaaaa".
 
-Quantifiers ini memungkinkan Anda untuk menggambarkan pola yang lebih kompleks dalam pencocokan string dengan ekspresi reguler.
 
 
 
