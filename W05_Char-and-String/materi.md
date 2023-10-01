@@ -35,14 +35,14 @@ String anotherString = new String("Hello");
 
 ```
 ## 5.2.2 String Concatenation
-Di Java dapat menggabungkan/mengkonket 2 buah string dengan menggunakan operator '+'.
+Di Java dapat menggabungkan/mengkonket 2 buah string dengan menggunakan operator `+`.
 Contoh penggunaan :
 ```java
 String firstName = "John";
 String lastName = "Doe";
 String fullName = firstName + " " + lastName;
 ```
-Saat Anda perlu melakukan banyak operasi manipulasi string, penggunaan penggabungan String dengan operator + bisa menjadi tidak efisien karena pembuatan objek baru. Dalam kasus seperti itu, Anda dapat menggunakan StringBuilder atau StringBuffer untuk membuat dan memodifikasi string secara efisien. Keduanya mirip dalam fungsionalitas, tetapi memiliki perbedaan utama: StringBuilder tidak bersifat thread-safe, sedangkan StringBuffer bersifat thread-safe.
+Saat Anda perlu melakukan banyak operasi manipulasi string, penggunaan penggabungan String dengan operator `+` bisa menjadi tidak efisien karena pembuatan objek baru. Dalam kasus seperti itu, Anda dapat menggunakan `StringBuilder` atau `StringBuffer` untuk membuat dan memodifikasi string secara efisien. Keduanya mirip dalam fungsionalitas, tetapi memiliki perbedaan utama: `StringBuilder` tidak bersifat thread-safe, sedangkan `StringBuffer` bersifat thread-safe.
 
 Contoh penggunaan stringBuilder :
 ```java
@@ -163,7 +163,7 @@ boolean cocok = pencocok.matches(); // Mengembalikan true
 ```
 
 ## 5.3.1 Method find() pada Regular Expression
-Metode find() dari kelas Matcher mencari kemunculan pertama pola dalam string input. Metode ini mengembalikan true jika ada pattern yang sama pada matcher dan false jika tidak ada string sesuai pattern pada matcher.
+Metode `find()` dari kelas Matcher mencari kemunculan pertama pola dalam string input. Metode ini mengembalikan true jika ada pattern yang sama pada matcher dan false jika tidak ada string sesuai pattern pada matcher.
 
 Contoh penggunaan:
 ```java
@@ -179,11 +179,13 @@ Parameter pertama dari Pattern.compile() nethod adakah pola/pattern yang mendesk
 
 Berikut contoh penyusunan pola yang biasa digunakan :
 
-[abc]	: Find one character from the options between the brackets
-[^abc]	: Find one character NOT between the brackets
-[0-9]	: Find one character from the range 0 to 9
+`[abc]`	: Find one character from the options between the brackets
 
-Braket [] diatas digunakan untuk mendefinisikan range dari charactersnya.
+`[^abc]`: Find one character NOT between the brackets
+
+`[0-9]`	: Find one character from the range 0 to 9
+
+Braket `[ ]` diatas digunakan untuk mendefinisikan range dari charactersnya.
 ### 5.3.2.1 Metacharacters
 Metharacters adalah characters yang memiliki arti tersendiri.
 
