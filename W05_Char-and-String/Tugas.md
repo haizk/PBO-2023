@@ -1,3 +1,4 @@
+#Tugas
 Buatlah sebuah program Java yang memvalidasi data dari input yang dimasukkan user berupa tanggal lahir, nomor telepon dan alamat email. Tanggal lahir, nomor telepon, dan alamat email harus memnuhi kriteria sebagai berikut.
 
 Kriteria Tanggal Lahir :
@@ -16,4 +17,9 @@ Kriteria Alamat Email :
 3. Setidaknya memiliki satu titik setelah "@".
 4. Panjang alamat email antara 5 hingga 50 karakter.
 5. Program harus mengembalikan pesan "Valid" jika alamat email valid, dan "Tidak Valid" jika tidak valid.
+
+Format penulisan nama file adalah PPBO_05_NIM.java, dengan isi file sebagai berikut:
+```java
+
+fhahf
 
