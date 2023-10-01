@@ -146,3 +146,18 @@ for (String word : words) {
     System.out.println(word);
 }
 ```
+## Regular Expression
+Ekspresi Reguler (Regular Expression), sering disingkat sebagai regex atau regexp, adalah alat yang kuat untuk pencocokan pola dan pencarian dalam string. Dalam bahasa pemrograman Java, ekspresi reguler didukung melalui build-in package "java.util.regex". Regular Expression memungkinkan untuk mendefinisikan pola yang dapat digunakan untuk mencocokkan dan mencari teks dalam string. Ini sangat berguna untuk tugas seperti validasi data, ekstraksi teks, dan analisis sintaks.
+
+Package java.util.regex menyediakan dua kelas utama: Pattern dan Matcher. Kelas Pattern mewakili ekspresi reguler yang telah dikompilasi, sementara kelas Matcher digunakan untuk melakukan operasi pencocokan pada string input yang diberikan.
+
+Contoh penggunaan Pattern dan Matcher dari Regex pada Java :
+```java
+//Pembuatan Pattern  atau pola
+Pattern pola = Pattern.compile("\\d{3}-\\d{2}-\\d{4}");
+
+//Pembuatan Matcher atau pencocokan
+Matcher pencocok = pola.matcher("123-45-6789");
+boolean cocok = pencocok.matches(); // Mengembalikan true
+
+```
