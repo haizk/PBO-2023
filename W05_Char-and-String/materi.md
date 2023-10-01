@@ -96,13 +96,13 @@ String result = buffer.toString();
 
 System.out.println(result); // Output: "hello World!"
 ```
-StringBuffer, meskipun sedikit lebih lambat dalam penggunaan tunggal, berguna dalam lingkungan multithread karena bersifat thread-safe, sehingga dapat digunakan secara aman dalam konteks bersamaan oleh beberapa thread.
+`StringBuffer`, meskipun sedikit lebih lambat dalam penggunaan tunggal, berguna dalam lingkungan `multithread` karena bersifat thread-safe, sehingga dapat digunakan secara aman dalam konteks bersamaan oleh beberapa thread.
 
 ## 5.2.3 String Method
 Di bahasa pemrograman Java terdapat beberapa build-in method pada String Class yang dapat membantu kita dalam memproses informasi dari String.
 Berikut beberapa contoh String Method :
 ### 1. CharAt()
-Method ChatAt() digunakan untuk mengembalikan sebuah character dari sebuah String pada indek tertentu.
+Method `ChatAt()` digunakan untuk mengembalikan sebuah character dari sebuah String pada indek tertentu.
 Contoh penggunaan :
 ```java
 String text = "Hello, World!";
@@ -110,7 +110,7 @@ char character = text.charAt(0); // Mengambil karakter pertama 'H'
 System.out.println(character);
 ```
 ### 2. compareTo()
-Metode compareTo() digunakan untuk membandingkan urutan leksikal antara dua string. Itu mengembalikan nilai negatif jika string pertama lebih kecil, nilai positif jika string pertama lebih besar, dan 0 jika kedua string sama.
+Metode `compareTo()` digunakan untuk membandingkan urutan leksikal antara dua string. Itu mengembalikan nilai negatif jika string pertama lebih kecil, nilai positif jika string pertama lebih besar, dan 0 jika kedua string sama.
 Contoh penggunaan :
 ```java
 String str1 = "apple";
@@ -119,7 +119,7 @@ int result = str1.compareTo(str2); // Menghasilkan nilai negatif
 System.out.println(result);
 ```
 ### 3. toLowerCase() dan toUpperCase()
-Metode toLowerCase() digunakan untuk mengonversi semua karakter dalam string menjadi huruf kecil, sedangkan toUpperCase() mengonversi semua karakter menjadi huruf besar.
+Metode `toLowerCase()` digunakan untuk mengonversi semua karakter dalam string menjadi huruf kecil, sedangkan `toUpperCase()` mengonversi semua karakter menjadi huruf besar.
 Contoh penggunaan :
 ```java
 String text = "Hello, World!";
@@ -129,7 +129,7 @@ System.out.println(lowercaseText); // hello, world!
 System.out.println(uppercaseText); // HELLO, WORLD!
 ```
 ### 4. startsWith() dan endsWith()
-Metode startsWith() digunakan untuk memeriksa apakah string dimulai dengan substring tertentu. endsWith() digunakan untuk memeriksa apakah string diakhiri dengan substring tertentu.
+Metode `startsWith()` digunakan untuk memeriksa apakah string dimulai dengan substring tertentu. `endsWith()` digunakan untuk memeriksa apakah string diakhiri dengan substring tertentu.
 ```java
 String text = "Hello, World!";
 boolean startsWithHello = text.startsWith("Hello"); // true
@@ -138,7 +138,7 @@ System.out.println(startsWithHello);
 System.out.println(endsWithWorld);
 ```
 ### 5. split()
-Metode split() digunakan untuk membagi string menjadi potongan-potongan berdasarkan suatu pemisah (separator) dan mengembalikan array string.
+Metode `split()` digunakan untuk membagi string menjadi potongan-potongan berdasarkan suatu pemisah (separator) dan mengembalikan array string.
 ```java
 String sentence = "Java is a powerful programming language";
 String[] words = sentence.split(" "); // Memecah berdasarkan spasi
@@ -147,7 +147,7 @@ for (String word : words) {
 }
 ```
 ## 5.3 Regular Expression
-Ekspresi Reguler (Regular Expression), sering disingkat sebagai regex atau regexp, adalah alat yang kuat untuk pencocokan pola dan pencarian dalam string. Dalam bahasa pemrograman Java, ekspresi reguler didukung melalui build-in package "java.util.regex". Regular Expression memungkinkan untuk mendefinisikan pola yang dapat digunakan untuk mencocokkan dan mencari teks dalam string. Ini sangat berguna untuk tugas seperti validasi data, ekstraksi teks, dan analisis sintaks.
+Ekspresi Reguler (Regular Expression), sering disingkat sebagai regex atau regexp, adalah alat yang kuat untuk pencocokan pola dan pencarian dalam string. Dalam bahasa pemrograman Java, ekspresi reguler didukung melalui build-in package `java.util.regex`. Regular Expression memungkinkan untuk mendefinisikan pola yang dapat digunakan untuk mencocokkan dan mencari teks dalam string. Ini sangat berguna untuk tugas seperti validasi data, ekstraksi teks, dan analisis sintaks.
 
 Package java.util.regex menyediakan dua kelas utama: Pattern dan Matcher. Kelas Pattern mewakili ekspresi reguler yang telah dikompilasi, sementara kelas Matcher digunakan untuk melakukan operasi pencocokan pada string input yang diberikan.
 
@@ -187,7 +187,7 @@ Berikut contoh penyusunan pola yang biasa digunakan :
 
 Braket `[ ]` diatas digunakan untuk mendefinisikan range dari charactersnya.
 ### 5.3.2.1 Metacharacters
-Metharacters adalah characters yang memiliki arti tersendiri.
+`Metharacters` adalah characters yang memiliki arti tersendiri.
 
 Berikut contoh dari metacharacter yang dapat digunakan untuk pembuatan sebuah pattern:
 
@@ -205,7 +205,7 @@ Berikut contoh dari metacharacter yang dapat digunakan untuk pembuatan sebuah pa
 
 `\b`	    : Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
 
-\uxxxx	:Find the Unicode character specified by the hexadecimal number xxxx
+`\uxxxx`	:Find the Unicode character specified by the hexadecimal number xxxx
 
 ### 5.3.2.2 Quantifiers
 Quantifiers dalam pembuatan pola (pattern) dalam ekspresi reguler digunakan untuk mengontrol berapa kali sebuah karakter atau grup karakter tertentu harus muncul dalam string yang dicocokkan. Berikut adalah beberapa quantifier yang umum digunakan dalam ekspresi reguler:
