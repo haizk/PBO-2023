@@ -17,19 +17,19 @@ char uniChar = '\u039A';
 ## 5.1.2 Escape Sequence
 Karakter yang diawali dengan garis miring terbalik `\` merupakan escape sequence dan memiliki arti khusus bagi kompiler. Dengan menggunakan Escape Sequence ini, Anda dapat memasukkan karakter-karakter ini ke dalam teks Anda tanpa mengganggu penafsiran atau pemformatan teks yang salah.
 
-Karakter baris baru (\n) telah sering digunakan dalam pernyataan System.out.println() untuk melanjutkan ke baris berikutnya setelah string dicetak.
+Karakter baris baru `\n` telah sering digunakan dalam pernyataan System.out.println() untuk melanjutkan ke baris berikutnya setelah string dicetak.
 
 Berikut merupakan escape sequence di Java:
 Escape Sequence          | Deskripsi 
 ---------------------------- | ------ 
-\t       | Menyisipkan karakter tab pada teks di titik ini. Ini digunakan untuk membuat jarak horizontal seperti ketika Anda menekan tombol "Tab" pada keyboard.
-\b       | Menyisipkan karakter backspace pada teks di titik ini. Ini digunakan untuk menghapus karakter sebelumnya dalam teks.
-\n       | Menyisipkan karakter newline (baris baru) pada teks di titik ini. Ini digunakan untuk memindahkan teks ke baris berikutnya.
-\r | Menyisipkan karakter carriage return pada teks di titik ini. Ini sering digunakan bersama dengan newline (\n) untuk membuat baris baru dalam teks.
-\f     |Menyisipkan karakter form feed pada teks di titik ini. Ini digunakan untuk memberikan perintah pemrosesan teks tertentu, terutama dalam konteks cetak.
-\' | Menyisipkan karakter tanda kutip tunggal (single quote) pada teks di titik ini. Ini digunakan saat Anda ingin mencetak tanda kutip tunggal dalam teks yang diapit oleh tanda kutip tunggal.
-\"    | Menyisipkan karakter tanda kutip ganda (double quote) pada teks di titik ini. Ini digunakan saat Anda ingin mencetak tanda kutip ganda dalam teks yang diapit oleh tanda kutip ganda.
-\\ |  Menyisipkan karakter backslash pada teks di titik ini. Ini digunakan saat Anda ingin mencetak karakter backslash dalam teks.
+`\t`       | Menyisipkan karakter tab pada teks di titik ini. Ini digunakan untuk membuat jarak horizontal seperti ketika Anda menekan tombol "Tab" pada keyboard.
+`\b`       | Menyisipkan karakter backspace pada teks di titik ini. Ini digunakan untuk menghapus karakter sebelumnya dalam teks.
+`\n`       | Menyisipkan karakter newline (baris baru) pada teks di titik ini. Ini digunakan untuk memindahkan teks ke baris berikutnya.
+`\r` | Menyisipkan karakter carriage return pada teks di titik ini. Ini sering digunakan bersama dengan newline `\n` untuk membuat baris baru dalam teks.
+`\f`     |Menyisipkan karakter form feed pada teks di titik ini. Ini digunakan untuk memberikan perintah pemrosesan teks tertentu, terutama dalam konteks cetak.
+`\'` | Menyisipkan karakter tanda kutip tunggal (single quote) pada teks di titik ini. Ini digunakan saat Anda ingin mencetak tanda kutip tunggal dalam teks yang diapit oleh tanda kutip tunggal.
+`\"`    | Menyisipkan karakter tanda kutip ganda (double quote) pada teks di titik ini. Ini digunakan saat Anda ingin mencetak tanda kutip ganda dalam teks yang diapit oleh tanda kutip ganda.
+`\\` |  Menyisipkan karakter backslash pada teks di titik ini. Ini digunakan saat Anda ingin mencetak karakter backslash dalam teks.
 
 # 5.2 String Class
 
@@ -208,14 +208,14 @@ Braket `[ ]` diatas digunakan untuk mendefinisikan range dari charactersnya.
 Berikut contoh dari metacharacter yang dapat digunakan untuk pembuatan sebuah pattern:
 Metacharacter             | Deskripsi 
 ---------------------------- | ------ 
-\| | Find a match for any one of the patterns separated by '\|' as in: `cat\|dog\|fish`
-.	| Find just one instance of any character
-^	| Finds a match as the beginning of a string as in: ^Hello
-$	| Finds a match at the end of the string as in: World$
-\d | Find a digit
-\s | Find a whitespace character
-\b | Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
-\uxxxx | Find the Unicode character specified by the hexadecimal number xxxx
+`\|` | Find a match for any one of the patterns separated by `\|` as in: `cat\|dog\|fish`
+`.`	| Find just one instance of any character
+`^`	| Finds a match as the beginning of a string as in: ^Hello
+`$`	| Finds a match at the end of the string as in: World$
+`\d` | Find a digit
+`\s` | Find a whitespace character
+`\b` | Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
+`\uxxxx` | Find the Unicode character specified by the hexadecimal number xxxx
 
 ### 5.3.2.2 Quantifiers
 Quantifiers dalam pembuatan pola (pattern) dalam ekspresi reguler digunakan untuk mengontrol berapa kali sebuah karakter atau grup karakter tertentu harus muncul dalam string yang dicocokkan. Berikut adalah beberapa quantifier yang umum digunakan dalam ekspresi reguler:
