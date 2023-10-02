@@ -21,7 +21,6 @@ Kriteria Alamat Email :
 5. Program harus mengembalikan pesan "Email Valid" jika alamat email valid, dan "Email Tidak Valid" jika tidak valid.
 
 Format penulisan nama file adalah PPBO_05_NIM.java, dengan isi file sebagai berikut:
-```java
 
 ```java
 // Nama : ...
