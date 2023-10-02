@@ -192,7 +192,7 @@ Braket `[ ]` diatas digunakan untuk mendefinisikan range dari charactersnya.
 Berikut contoh dari metacharacter yang dapat digunakan untuk pembuatan sebuah pattern:
 Methacharacter             | Deskripsi 
 ---------------------------- | ------ 
-(|) | Find a match for any one of the patterns separated by `|` as in: `cat|dog|fish`
+| |: Find a match for any one of the patterns separated by `|` as in: `cat|dog|fish`
 .	| Find just one instance of any character
 ^	| Finds a match as the beginning of a string as in: ^Hello
 $	| Finds a match at the end of the string as in: World$
