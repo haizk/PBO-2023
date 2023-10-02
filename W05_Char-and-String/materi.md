@@ -15,7 +15,7 @@ char ch = 'a';
 char uniChar = '\u039A';
 ```
 ## 5.1.2 Escape Sequence
-Karakter yang diawali dengan garis miring terbalik (\) merupakan escape sequence dan memiliki arti khusus bagi kompiler. Dengan menggunakan Escape Sequence ini, Anda dapat memasukkan karakter-karakter ini ke dalam teks Anda tanpa mengganggu penafsiran atau pemformatan teks yang salah.
+Karakter yang diawali dengan garis miring terbalik `\` merupakan escape sequence dan memiliki arti khusus bagi kompiler. Dengan menggunakan Escape Sequence ini, Anda dapat memasukkan karakter-karakter ini ke dalam teks Anda tanpa mengganggu penafsiran atau pemformatan teks yang salah.
 
 Karakter baris baru (\n) telah sering digunakan dalam pernyataan System.out.println() untuk melanjutkan ke baris berikutnya setelah string dicetak.
 
