@@ -231,15 +231,17 @@ Quantifier           | Deskripsi
 # Baca Lebih Lanjut
 1. **Character Class**:
    - [Class Character - Oracle](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html)
-   - [Java - Character Class - Tutorial Point](https://www.tutorialspoint.com/java/java_characters.htm)
+   - [Java - Character Class - Tutorialspoint](https://www.tutorialspoint.com/java/java_characters.htm)
    - [Character Class in Java - GeeksforGeeks](https://www.geeksforgeeks.org/character-class-java/)
 2. **String Class**:
-   - [Java Assertion - javatpoint](https://www.javatpoint.com/assertion-in-java)
-   - [Assertions in Java - GeeksforGeeks](https://www.geeksforgeeks.org/assertions-in-java/)
-   - [How to use assertions in Java - InfoWorld](https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html)
-   - [Java Assertions - Programiz](https://www.programiz.com/java-programming/assertions)
-   - [Programming With Assertions - Oracle](https://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#:~:text=An%20assertion%20is%20a%20statement,than%20the%20speed%20of%20light.)
+   - [Class String - Oracle](https://docs.oracle.com/javase%2F7%2Fdocs%2Fapi%2F%2F/java/lang/String.html)
+   - [String Class in Java - GeeksforGeeks](https://www.geeksforgeeks.org/string-class-in-java/)
+   - [Java String - javaTpoint](https://www.javatpoint.com/java-string)
+   - [Java - Strings Class - Tutorialspoint](https://www.tutorialspoint.com/java/java_strings.htm)
 3. **Regular Expression**
+   - [Java - Regular Expressions - Tutorialspoint](https://www.tutorialspoint.com/java/java_regular_expressions.htm)
+   - [Java Regex - javaTpoint](https://www.javatpoint.com/java-regex)
+   - [Lesson: Regular Expressions - Oracle](https://docs.oracle.com/javase/tutorial/essential/regex/)
    
 
 
