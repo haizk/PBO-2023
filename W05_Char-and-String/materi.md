@@ -14,7 +14,23 @@ char ch = 'a';
 // Unicode for uppercase Greek omega character
 char uniChar = '\u039A';
 ```
-## 
+## 5.1.2 Escape Sequence
+Karakter yang diawali dengan garis miring terbalik (\) merupakan escape sequence dan memiliki arti khusus bagi kompiler. Dengan menggunakan Escape Sequence ini, Anda dapat memasukkan karakter-karakter ini ke dalam teks Anda tanpa mengganggu penafsiran atau pemformatan teks yang salah.
+
+Karakter baris baru (\n) telah sering digunakan dalam pernyataan System.out.println() untuk melanjutkan ke baris berikutnya setelah string dicetak.
+
+Berikut merupakan escape sequence di Java:
+Escape Sequence          | Deskripsi 
+---------------------------- | ------ 
+\t       | Menyisipkan karakter tab pada teks di titik ini. Ini digunakan untuk membuat jarak horizontal seperti ketika Anda menekan tombol "Tab" pada keyboard.
+\b       | Menyisipkan karakter backspace pada teks di titik ini. Ini digunakan untuk menghapus karakter sebelumnya dalam teks.
+\n       | Menyisipkan karakter newline (baris baru) pada teks di titik ini. Ini digunakan untuk memindahkan teks ke baris berikutnya.
+\r | Menyisipkan karakter carriage return pada teks di titik ini. Ini sering digunakan bersama dengan newline (\n) untuk membuat baris baru dalam teks.
+\f     |Menyisipkan karakter form feed pada teks di titik ini. Ini digunakan untuk memberikan perintah pemrosesan teks tertentu, terutama dalam konteks cetak.
+\' | Menyisipkan karakter tanda kutip tunggal (single quote) pada teks di titik ini. Ini digunakan saat Anda ingin mencetak tanda kutip tunggal dalam teks yang diapit oleh tanda kutip tunggal.
+\"    | Menyisipkan karakter tanda kutip ganda (double quote) pada teks di titik ini. Ini digunakan saat Anda ingin mencetak tanda kutip ganda dalam teks yang diapit oleh tanda kutip ganda.
+\\ |  Menyisipkan karakter backslash pada teks di titik ini. Ini digunakan saat Anda ingin mencetak karakter backslash dalam teks.
+
 # 5.2 String Class
 
 String merupakan sebuah nilai tunggal yang berisikan kumpulan dari character.
@@ -211,6 +227,20 @@ Quantifier           | Deskripsi
 `{n}` | Quantifier `{n}` mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul tepat n kali. Misalnya, `a{3}` akan cocok dengan "aaa" tetapi tidak akan cocok dengan "aa" atau "a".
 `{n,}`     | Quantifier `{n,}` mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul setidaknya n kali atau lebih. Misalnya, `a{2,}` akan cocok dengan "aa", "aaa", "aaaa", dan seterusnya.
 `{n,m}`    | Quantifier `{n,m}` mengindikasikan bahwa karakter atau grup karakter sebelumnya harus muncul setidaknya n kali dan paling banyak m kali. Misalnya, `a{2,4}` akan cocok dengan "aa", "aaa", atau "aaaa", tetapi tidak akan cocok dengan "a" atau "aaaaa".
+
+# Baca Lebih Lanjut
+1. **Character Class**:
+   - [Class Character - Oracle](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html)
+   - [Java - Character Class - Tutorial Point](https://www.tutorialspoint.com/java/java_characters.htm)
+   - [Character Class in Java - GeeksforGeeks](https://www.geeksforgeeks.org/character-class-java/)
+2. **String Class**:
+   - [Java Assertion - javatpoint](https://www.javatpoint.com/assertion-in-java)
+   - [Assertions in Java - GeeksforGeeks](https://www.geeksforgeeks.org/assertions-in-java/)
+   - [How to use assertions in Java - InfoWorld](https://www.infoworld.com/article/3543239/how-to-use-assertions-in-java.html)
+   - [Java Assertions - Programiz](https://www.programiz.com/java-programming/assertions)
+   - [Programming With Assertions - Oracle](https://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#:~:text=An%20assertion%20is%20a%20statement,than%20the%20speed%20of%20light.)
+3. **Regular Expression**
+   
 
 
 
