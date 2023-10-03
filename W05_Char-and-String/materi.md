@@ -203,7 +203,7 @@ Berikut contoh penyusunan pola yang biasa digunakan :
 
 Braket `[ ]` diatas digunakan untuk mendefinisikan range dari charactersnya.
 ### 5.3.2.1 Metacharacters
-`Metharacters` adalah characters yang memiliki arti tersendiri.
+`Metacharacters` adalah characters yang memiliki arti tersendiri.
 
 Berikut contoh dari metacharacter yang dapat digunakan untuk pembuatan sebuah pattern:
 Metacharacter             | Deskripsi 
