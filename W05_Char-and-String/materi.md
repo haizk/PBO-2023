@@ -290,34 +290,29 @@ str12: true
 str13: false
 ```
 1. strPat: Pattern ini adalah "12[987]34". Ini berarti string harus dimulai dengan "12", diikuti oleh salah satu karakter yang merupakan salah satu dari "9", "8", atau "7", dan diakhiri dengan "34". Pemeriksaan dilakukan dengan menggunakan metode .matches().
-
 Hasil pemeriksaan:
 str1 cocok karena "12934" sesuai dengan pola.
 str2 tidak cocok karena "129834" memiliki karakter tambahan di tengah-tengah pola.
 str3 tidak cocok karena "12734" memiliki karakter "7" di tengah-tengah pola.
 
 2. strPat2: Pattern ini adalah "A[a-z0-9][A-Z]". Ini berarti string harus dimulai dengan "A", diikuti oleh satu karakter alfanumerik kecil atau angka, dan diakhiri dengan satu karakter huruf besar.
-
 Hasil pemeriksaan:
 str4 cocok karena "AzH" sesuai dengan pola.
 str5 tidak cocok karena "A3H" memiliki angka di tengah-tengah pola.
 str6 tidak cocok karena "A+H" memiliki karakter tambahan di tengah-tengah pola.
 
 3. strPat3: Pattern ini adalah "abc[a-z&&[^e-j]]". Ini berarti string harus dimulai dengan "abc", diikuti oleh satu karakter kecil yang bukan merupakan "e" sampai "j".
-
 Hasil pemeriksaan:
 str7 cocok karena "abcd" sesuai dengan pola.
 str8 tidak cocok karena "abcf" memiliki karakter "f" yang termasuk dalam rentang "e" sampai "j".
 
 4. strPat4: Pattern ini adalah "A{2}[0-9]{3,4}". Ini berarti string harus dimulai dengan tepat dua karakter "A", diikuti oleh tiga atau empat digit angka.
-
 Hasil pemeriksaan:
 str9 cocok karena "AA123" sesuai dengan pola.
 str10 tidak cocok karena "A123" memiliki hanya satu karakter "A".
 str11 cocok karena "AA873495" sesuai dengan pola.
 
 5. strPat5: Pattern ini adalah "(Hai |Hello ){2}(Dunia|World)". Ini berarti string harus mengandung dua pengulangan dari salah satu dari dua pilihan: "Hai " atau "Hello ", diikuti oleh salah satu dari dua pilihan: "Dunia" atau "World".
-
 Hasil pemeriksaan:
 str12 cocok karena "Hello Hai World" sesuai dengan pola.
 str13 cocok karena "Hai Dunia" sesuai dengan pola.
