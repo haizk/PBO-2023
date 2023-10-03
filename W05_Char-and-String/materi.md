@@ -195,11 +195,11 @@ Parameter pertama dari Pattern.compile() nethod adakah pola/pattern yang mendesk
 
 Berikut contoh penyusunan pola yang biasa digunakan :
 
-`[abc]`	: Find one character from the options between the brackets
+`[abc]`	: digunakan untuk mencocokkan satu karakter yang bisa berupa salah satu dari karakter yang ada dalam tanda kurung siku [abc]. Misalnya, [abc]at akan mencocokkan string "cat", "bat", atau "aat", tetapi tidak akan mencocokkan "rat" karena huruf "r" tidak termasuk dalam opsi di dalam tanda kurung siku.
 
-`[^abc]`: Find one character NOT between the brackets
+`[^abc]`: digunakan untuk mencocokkan satu karakter yang tidak ada dalam tanda kurung siku [^abc]. Misalnya, [^abc]at akan mencocokkan string "rat" karena huruf "r" tidak termasuk dalam opsi di dalam tanda kurung siku, tetapi tidak akan mencocokkan "cat" atau "bat" karena huruf "c" dan "b" termasuk dalam opsi tersebut.
 
-`[0-9]`	: Find one character from the range 0 to 9
+`[0-9]`	:  digunakan untuk mencocokkan satu karakter yang berada dalam rentang angka dari 0 hingga 9. Misalnya, [0-9]x akan mencocokkan string "1x", "5x", atau "9x", tetapi tidak akan mencocokkan "ax" karena "a" bukan angka dalam rentang tersebut.
 
 Braket `[ ]` diatas digunakan untuk mendefinisikan range dari charactersnya.
 ### 5.3.2.1 Metacharacters
@@ -208,14 +208,14 @@ Braket `[ ]` diatas digunakan untuk mendefinisikan range dari charactersnya.
 Berikut contoh dari metacharacter yang dapat digunakan untuk pembuatan sebuah pattern:
 Metacharacter             | Deskripsi 
 ---------------------------- | ------ 
-`\|` | Find a match for any one of the patterns separated by `\|` as in: `cat\|dog\|fish`
-`.`	| Find just one instance of any character
-`^`	| Finds a match as the beginning of a string as in: ^Hello
-`$`	| Finds a match at the end of the string as in: World$
-`\d` | Find a digit
-`\s` | Find a whitespace character
-`\b` | Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
-`\uxxxx` | Find the Unicode character specified by the hexadecimal number xxxx
+`\|` | Metacharacter ini digunakan untuk mencocokkan salah satu pola yang dipisahkan oleh tanda `\|`. Misalnya, `cat\|dog\|fish` akan mencocokkan string yang mengandung salah satu dari kata-kata tersebut.
+`.`	| Metacharacter ini digunakan untuk mencocokkan satu karakter apa pun. Sebagai contoh, `c.t` akan mencocokkan string seperti "cat", "cut", atau "cot".
+`^`	| Metacharacter ini digunakan untuk mencocokkan awal dari sebuah string. Misalnya, `^Hello` akan mencocokkan string yang dimulai dengan "Hello"
+`$`	| Metacharacter ini digunakan untuk mencocokkan akhir dari sebuah string. Sebagai contoh, `World$` akan mencocokkan string yang diakhiri dengan "World".
+`\d` | Metacharacter ini digunakan untuk mencocokkan angka digit. Misalnya, `\d\d` akan mencocokkan dua digit berturut-turut dalam sebuah string.
+`\s` |  Metacharacter ini digunakan untuk mencocokkan karakter spasi (whitespace), seperti spasi atau karakter tab.
+`\b` |  Metacharacter ini digunakan untuk mencocokkan awal atau akhir dari sebuah kata. Misalnya, `\bWORD` akan mencocokkan kata yang dimulai dengan "WORD", sedangkan `WORD\b` akan mencocokkan kata yang diakhiri dengan "WORD".
+`\uxxxx` | Metacharacter ini digunakan untuk mencocokkan karakter Unicode yang ditentukan oleh nomor heksadesimal xxxx.
 
 ### 5.3.2.2 Quantifiers
 Quantifiers dalam pembuatan pola (pattern) dalam ekspresi reguler digunakan untuk mengontrol berapa kali sebuah karakter atau grup karakter tertentu harus muncul dalam string yang dicocokkan. Berikut adalah beberapa quantifier yang umum digunakan dalam ekspresi reguler:
