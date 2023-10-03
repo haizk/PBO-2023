@@ -312,12 +312,12 @@ Hasil pemeriksaan:
 Hasil pemeriksaan:
 - str9 cocok karena "AA123" sesuai dengan pola.
 - str10 tidak cocok karena "A123" memiliki hanya satu karakter "A".
-- str11 cocok karena "AA873495" sesuai dengan pola.
+- str11 tidak cocok karena "AA873495" tidak sesuai dengan pola kare angka setelah AA terdapat sebanyak 6.
 
 5. strPat5: Pattern ini adalah "(Hai |Hello ){2}(Dunia|World)". Ini berarti string harus mengandung dua pengulangan dari salah satu dari dua pilihan: "Hai " atau "Hello ", diikuti oleh salah satu dari dua pilihan: "Dunia" atau "World".
 Hasil pemeriksaan:
 - str12 cocok karena "Hello Hai World" sesuai dengan pola.
-- str13 cocok karena "Hai Dunia" sesuai dengan pola.
+- str13 tidak cocok karena "Hai Dunia" tidak sesuai dengan pola pada kata Hai/Helo hanya terdapat 1 kali.
 
 # Baca Lebih Lanjut
 1. **Character Class**:
