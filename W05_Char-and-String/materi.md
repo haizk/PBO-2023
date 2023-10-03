@@ -234,7 +234,7 @@ Quantifier           | Deskripsi
 ```java
 public class RegEx {
     public static void main(String[] args) {
-        String strPat = "12[987]34";
+        String strPat = "12[987]34"; //string harus dimulai dengan "12", diikuti oleh salah satu karakter yang merupakan salah satu dari "9", "8", atau "7", dan diakhiri dengan "34"
         String str1 = "12934";
         String str2 = "129834";
         String str3 = "12734";
