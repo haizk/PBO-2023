@@ -295,12 +295,12 @@ Penjelasan :
 Hasil pemeriksaan:
 - str1 cocok karena "12934" sesuai dengan pola.
 - str2 tidak cocok karena "129834" memiliki karakter tambahan di tengah-tengah pola.
-- str3 tidak cocok karena "12734" memiliki karakter "7" di tengah-tengah pola.
+- str3 cocok karena "12734" memiliki karakter "7" di tengah-tengah pola.
 
 2. strPat2: Pattern ini adalah "A[a-z0-9][A-Z]". Ini berarti string harus dimulai dengan "A", diikuti oleh satu karakter alfanumerik kecil atau angka, dan diakhiri dengan satu karakter huruf besar.
 Hasil pemeriksaan:
 - str4 cocok karena "AzH" sesuai dengan pola.
-- str5 tidak cocok karena "A3H" memiliki angka di tengah-tengah pola.
+- str5 cocok karena "A3H" memiliki angka di tengah-tengah pola.
 - str6 tidak cocok karena "A+H" memiliki karakter tambahan di tengah-tengah pola.
 
 3. strPat3: Pattern ini adalah "abc[a-z&&[^e-j]]". Ini berarti string harus dimulai dengan "abc", diikuti oleh satu karakter kecil yang bukan merupakan "e" sampai "j".
