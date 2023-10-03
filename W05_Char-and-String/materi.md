@@ -26,7 +26,6 @@ Escape Sequence          | Deskripsi
 `\b`       | Menyisipkan karakter backspace pada teks di titik ini. Ini digunakan untuk menghapus karakter sebelumnya dalam teks.
 `\n`       | Menyisipkan karakter newline (baris baru) pada teks di titik ini. Ini digunakan untuk memindahkan teks ke baris berikutnya.
 `\r` | Menyisipkan karakter carriage return pada teks di titik ini. Ini sering digunakan bersama dengan newline `\n` untuk membuat baris baru dalam teks.
-`\f`     |Menyisipkan karakter form feed pada teks di titik ini. Ini digunakan untuk memberikan perintah pemrosesan teks tertentu, terutama dalam konteks cetak.
 `\'` | Menyisipkan karakter tanda kutip tunggal (single quote) pada teks di titik ini. Ini digunakan saat Anda ingin mencetak tanda kutip tunggal dalam teks yang diapit oleh tanda kutip tunggal.
 `\"`    | Menyisipkan karakter tanda kutip ganda (double quote) pada teks di titik ini. Ini digunakan saat Anda ingin mencetak tanda kutip ganda dalam teks yang diapit oleh tanda kutip ganda.
 `\\` |  Menyisipkan karakter backslash pada teks di titik ini. Ini digunakan saat Anda ingin mencetak karakter backslash dalam teks.
