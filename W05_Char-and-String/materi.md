@@ -273,6 +273,22 @@ public class RegEx {
     }
 }
 ```
+Output :
+```java
+str1: true
+str2: false
+str3: true
+str4: true
+str5: true
+str6: false
+str7: true
+str8: false
+str9: true
+str10: false
+str11: false
+str12: true
+str13: false
+```
 
 # Baca Lebih Lanjut
 1. **Character Class**:
