@@ -1,5 +1,3 @@
-(Terakhir diperbarui 11 September 2023 pukul 11.42 oleh Alfiki, bukan AI)
-
 # Variabel
 Variabel digunakan untuk menyimpan dan mengelola data di dalam program. Di Java, ada berbagai jenis variabel, misalnya:
 
