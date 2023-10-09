@@ -269,7 +269,7 @@ byteArray.getClass() menghasilkan "class [B", yang merupakan tanda tipe run-time
 shortsArray.getClass() menghasilkan "class [S", yang merupakan tanda tipe run-time untuk objek Class dari array dengan tipe komponen short.
 strArray.getClass() menghasilkan "class [Ljava.lang.String;", yang merupakan tanda tipe run-time untuk objek Class dari array dengan tipe komponen String.  
 
-Selain itu, perlu diingat bahwa superclass langsung dari tipe array adalah java.lang.Object untuk semua jenis array. Jadi, intArray.getClass() menghasilkan "class [I" karena itu adalah objek Class dari array int, dan hal yang sama berlaku untuk array dengan tipe komponen yang berbeda.
+Selain itu, perlu diingat bahwa superclass langsung dari tipe array adalah java.lang.Object untuk semua jenis array. Jadi, intArray.getClass() menghasilkan "class [I" karena itu adalah objek Class dari array int, dan hal seperti itu juga berlaku untuk array dengan tipe komponen yang berbeda.
 
 ## Penyalinan Array
 
