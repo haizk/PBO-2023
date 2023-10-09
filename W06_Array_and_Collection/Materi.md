@@ -1,4 +1,4 @@
-# Array dalam Java
+# Array
 
 Array dalam Java adalah tipe data referensi yang berisi kelompok variabel dengan tipe yang sama dan nama yang sama. Array di Java berbeda dengan bahasa C/C++ dalam beberapa aspek penting. Berikut adalah poin-poin penting tentang array di Java:
 
