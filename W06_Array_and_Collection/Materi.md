@@ -772,9 +772,9 @@ for (Map.Entry<Integer, String> e : hm.entrySet())
 
 # Bacaan Lebih Lanjut
 **Array:**  
-[Java Arrays (w3schools.com)](https://www.w3schools.com/java/java_arrays.asp)
-[Arrays (Java Platform SE 8 ) (oracle.com)](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
+- [Java Arrays (w3schools.com)](https://www.w3schools.com/java/java_arrays.asp)  
+- [Arrays (Java Platform SE 8 ) (oracle.com)](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)  
 
 **Collection**:
-[Collections in Java - javatpoint](https://www.javatpoint.com/collections-in-java)
-[Collection (Java Platform SE 8 ) (oracle.com)](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)
+- [Collections in Java - javatpoint](https://www.javatpoint.com/collections-in-java)  
+- [Collection (Java Platform SE 8 ) (oracle.com)](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)  
