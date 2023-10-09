@@ -107,7 +107,8 @@ System.out.println(arr[5]); // Ini akan menghasilkan ArrayIndexOutOfBoundsExcept
 
 Array multidimensi adalah struktur array yang terdiri dari array-array, di mana setiap elemen dalam array tersebut adalah referensi ke array lain. Istilah lain untuk array multidimensi adalah Array Bersarang. Array multidimensi dibentuk dengan menambahkan tanda kurung siku ([]) sesuai dengan jumlah dimensi. Visualisasi dari array multidimensi dapat dilihat pada gambar berikut.  
 
-![Array Multidimensi](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Array%20Multidimensi.png)
+![Array Multidimensi](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Array%20Multidimensi.png)  
+Sumber gambar: dokumen penulis
 
 ### Syntax:
 
@@ -275,7 +276,8 @@ Selain itu, perlu diingat bahwa superclass langsung dari tipe array adalah java.
 
 Ketika menggandakan array satu dimensi seperti Object[], maka dilakukan "deep copy" dengan array baru yang berisi salinan elemen-elemen array asli bukan referensi (salinan membuat array yang benar-benar baru).  
 
-![Array DeepCopy](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Array%20Deepcopy.png)
+![Array DeepCopy](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Array%20Deepcopy.png)  
+Sumber gambar: dokumen penulis
 
 ```java
 // Program Java untuk mendemonstrasikan
@@ -308,7 +310,8 @@ false
 
 Saat Anda membuat salinan dari array multi-dimensi, salinan tersebut hanya membuat array baru, tetapi elemen-elemen dalam array merujuk (referensi) ke elemen-elemen dalam array yang asli. Jika ada subarray di dalam array utama, subarray tersebut tidak akan disalin sebagai array yang baru. Sebaliknya, subarray akan tetap menjadi referensi ke subarray asli dalam array aslinya. Jadi, jika Anda mengubah nilai di salah satu subarray dalam salinan shallow copy, perubahan itu juga akan terlihat dalam array asli.  
 
-![Array DeepCopy](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Array%20ShallowCopy.png)
+![Array DeepCopy](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Array%20ShallowCopy.png)  
+Sumber gambar: dokumen penulis
 
 ```java
 // Program Java untuk mendemonstrasikan
@@ -385,7 +388,8 @@ Keuntungan dari Framework Collection adalah:
 
 Framework Collection terdapat dalam package utility (java.util) dan memiliki hierarki interface dan kelas. Semua collection mengimplementasikan interface dasar Iterable yang menyediakan iterator. Interface utama dari semua struktur data yang dipelajari di bawah ini adalah `Collection`, yang menjadi dasar dari framework ini.
 
-![Hierarki Framework Collection di Java](URL_gambar)
+![Hierarki Framework Collection di Java](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Collection%20Hierarchy.png)  
+Sumber gambar: Data Flair
 
 Catatan:
 **Interface** merupakan blueprint yang hanya mendefinisikan method tanpa implementasi. Interface ini digunakan untuk memberikan aturan dasar dari setiap perilaku kelas yang mengimplementasikannya.
@@ -444,7 +448,7 @@ List<T> v = new Vector<>();
 
 Di mana T adalah tipe generik. Artinya, tipe ini dapat digantikan oleh objek yang memenuhi syarat apa pun pada saat proses berjalan, misalnya objek Integer, String, dan sebagainya. Kelas-kelas yang mengimplementasikan interface List adalah sebagai berikut:
 
-#### ArrayList  
+#### a. ArrayList  
 ArrayList menyediakan array dinamis dalam Java. ArrayList berguna dalam program-program di mana banyak diperlukan manipulasi dalam array. Maka dari itu, ArrayList sering dipakai meskipun relatif lebih lambat dibanding array biasa. Ukuran ArrayList diperbesar secara otomatis jika collection bertambah atau menyusut jika objek dihapus dari collection. ArrayList Java memungkinkan kita untuk mengakses list secara acak. ArrayList tidak dapat digunakan untuk tipe data primitif seperti int, char, dll. Kita memerlukan wrapper classes untuk kasus-kasus tersebut (materi wrapper classes ada di bab 2 \[variabel dan tipe data\]).
 
 Contoh ArrayList:
@@ -468,7 +472,7 @@ for (int i = 0; i < al.size(); i++)
     System.out.print(al.get(i) + " ");
 ```
 
-#### LinkedList  
+#### b. LinkedList  
 Kelas LinkedList adalah implementasi struktur data LinkedList yang merupakan struktur data linear di mana elemen-elemen tidak disimpan di lokasi berurutan dan setiap elemen adalah objek terpisah dengan bagian data dan bagian address-nya. Elemen-elemen dihubungkan menggunakan pointer dan address. Setiap elemen dikenal sebagai simpul/node.
 
 Contoh LinkedList:
@@ -492,7 +496,7 @@ for (int i = 0; i < ll.size(); i++)
     System.out.print(ll.get(i) + " ");
 ```
 
-#### Vector  
+#### c. Vector  
 Vector juga memungkinkan pembuatan array dinamis dalam Java. Vector identik dengan ArrayList dalam hal implementasi. Namun, perbedaan utama antara vektor dan ArrayList adalah bahwa Vektor disinkronkan dan ArrayList tidak disinkronkan. Maksud dari "sinkronisasi" di sini adalah:
 
 **Vector:** Ketika Anda menggunakan Vector untuk menyimpan data, itu berarti operasi-operasi seperti penambahan, penghapusan, atau iterasi ke dalamnya akan secara otomatis dilindungi dari akses konkuren oleh beberapa thread. Artinya, hanya satu thread yang dapat mengakses Vector pada satu waktu. Hal ini memastikan keamanan dalam kasus penggunaan bersama (multithreaded) di mana beberapa thread dapat mengakses Vector secara bersamaan. Konsep ini akan dipelajari kemudian.
@@ -520,7 +524,7 @@ for (int i = 0; i < v.size(); i++)
     System.out.print(v.get(i) + " ");
 ```
 
-#### Stack
+#### d. Stack
 Kelas Stack memodelkan dan mengimplementasikan struktur data Stack. Kelas ini didasarkan pada prinsip dasar *last-in-first-out* (LIFO). Selain operasi dasar push dan pop, kelas ini menyediakan tiga fungsi tambahan: `empty`, `search`, dan `peek`. Kelas ini juga dapat disebut sebagai subclass dari Vector.
 
 Contoh Stack:
@@ -554,7 +558,7 @@ while (itr.hasNext()) {
 }
 ```
 
-### 4. Queue Interface
+### 4. Interface Queue
 Seperti namanya, interface queue menjaga urutan FIFO (First In First Out) seperti antrean di dunia nyata. Interface ini digunakan untuk menyimpan semua elemen di mana urutan elemen dianggap penting. Misalnya, ketika kita mencoba memesan tiket, tiket dijual berdasarkan prinsip first come first serve. Oleh karena itu, orang yang tiba pertama kali dalam queue akan mendapatkan tiket terlebih dahulu. Kita dapat membuat objek queue dengan salah satu dari kelas-kelas ini karena semua kelas turunan ini mengimplementasikan interface queue.
 
 Contohnya:
@@ -566,7 +570,7 @@ Queue<T> ad = new ArrayDeque<>();
 
 Implementasi interface queue yang paling sering digunakan adalah PriorityQueue.
 
-#### Prioritas Antrian (Priority Queue)  
+#### a. Priority Queue  
 PriorityQueue digunakan ketika objek harus diproses berdasarkan prioritas. Meskipun queue mengikuti algoritma First-In-First-Out, kadang-kadang elemen-elemen dalam queue harus diproses sesuai dengan prioritas, maka kelas ini diperlukan. Elemen-elemen dalam priority queue diurutkan berdasarkan urutan alami, atau berdasarkan Comparator yang disediakan pada saat konstruksi queue, tergantung pada konstruktor mana yang digunakan.
 
 Mari kita pahami priority queue dengan contoh:
@@ -607,7 +611,7 @@ Deque<T> ad = new ArrayDeque<>();
 
 Di mana T adalah tipe objek. Kelas yang mengimplementasikan interface deque adalah ArrayDeque.
 
-#### ArrayDeque  
+#### a. ArrayDeque  
 Kelas ArrayDeque yang diimplementasikan dalam framework collection memberikan cara untuk menerapkan array yang dapat disesuaikan ukurannya (resizable). Struktur ini merupakan jenis khusus dari array yang dapat tumbuh dan memungkinkan pengguna untuk menambah atau menghapus elemen dari kedua sisi queue. Array deque tidak memiliki batasan kapasitas dan akan tumbuh sesuai kebutuhan untuk mendukung penggunaan.
 
 Mari kita pahami ArrayDeque dengan contoh:
@@ -645,3 +649,132 @@ Output:
 [291, 564, 24, 14]
 ```
 
+### 6. Interface Set
+Interface Set adalah struktur kumpulan objek yang tidak menggunakan urutan serta tidak memperbolehkan adanya nilai duplikat. Set ini digunakan ketika kita ingin menghindari duplikasi objek. Interface Set ini diimplementasikan oleh berbagai kelas seperti HashSet, TreeSet, LinkedHashSet, dan lain-lain. Karena semua kelas turunan mengimplementasikan set, kita dapat membuat objek set dengan salah satu dari kelas-kelas ini.
+
+Contohnya:
+
+```java
+Set<T> hs = new HashSet<>(); 
+Set<T> lhs = new LinkedHashSet<>(); 
+Set<T> ts = new TreeSet<>();
+```
+
+Kelas-kelas berikut mengimplementasikan antarmuka Set:
+
+#### a. HashSet
+Kelas HashSet adalah implementasi bawaan dari struktur data tabel hash. Objek yang kita masukkan ke HashSet tidak menjamin akan dimasukkan dalam urutan yang sama. Objek dimasukkan berdasarkan kode hash mereka. Kelas ini juga memungkinkan penambahan elemen NULL. Mari pahami HashSet dengan contoh berikut:
+
+```java
+
+HashSet<String> hs = new HashSet<String>();
+
+hs.add("FSRD");
+hs.add("FKIP");
+hs.add("FH");
+hs.add("FEB");
+hs.add("FATISDA");
+
+// Melakukan traverse elemen
+Iterator<String> itr = hs.iterator();
+while (itr.hasNext()) {
+    System.out.println(itr.next());
+}
+```
+
+#### b. LinkedHashSet
+LinkedHashSet sangat mirip dengan HashSet. Perbedaannya adalah LinkedHashSet menggunakan double linked list untuk menyimpan data dan mempertahankan urutan elemen.
+
+Mari pahami LinkedHashSet dengan contoh berikut:
+
+```java
+LinkedHashSet<String> lhs = new LinkedHashSet<String>();
+
+lhs.add("FSRD");
+lhs.add("FKIP");
+lhs.add("FH");
+lhs.add("FEB");
+lhs.add("FATISDA");
+
+// Melakukan traverse elemen
+Iterator<String> itr = lhs.iterator();
+while (itr.hasNext()) {
+    System.out.println(itr.next());
+}
+```
+
+### 7. Interface Sorted Set
+Interface ini mirip dengan interface Set. Satu-satunya perbedaan adalah antarmuka ini adalah SortedSet bersifat urut. Interface sorted set meng-extend interface set dan digunakan untuk mengelola data yang perlu diurutkan. Kelas yang mengimplementasikan antarmuka ini adalah TreeSet. Karena kelas ini mengimplementasikan SortedSet, kita dapat membuat objek SortedSet dengan kelas ini.
+
+Contohnya:
+
+```java
+SortedSet<T> ts = new TreeSet<>(); 
+```
+
+Di mana T adalah tipe objek.
+
+Kelas yang mengimplementasikan antarmuka sorted set adalah TreeSet.
+
+#### a. TreeSet
+Kelas TreeSet menggunakan struktur Pohon untuk penyimpanan. Urutan elemen dipertahankan oleh set menggunakan urutan alami mereka. TreeSet dapat diatur agar mengurutkan elemen sesuai dengan aturan tertentu yang ditentukan oleh objek Comparator, dan untuk menjalankannya dengan benar sebagai kumpulan objek unik, elemen-elemen tersebut harus mengimplementasikan metode equals dengan benar.
+
+Mari pahami TreeSet dengan contoh:
+
+```java
+
+TreeSet<String> ts = new TreeSet<String>();
+
+ts.add("FSRD");
+ts.add("FKIP");
+ts.add("FH");
+ts.add("FEB");
+ts.add("FATISDA");
+
+// Melakukan traverse elemen
+Iterator<String> itr = ts.iterator();
+while (itr.hasNext()) {
+    System.out.println(itr.next());
+}
+```
+
+### 7. Interface Map
+Interface Map adalah struktur data yang mendukung pasangan key-value untuk memetakan data. Interface ini tidak memungkinkan duplikasi key karena kunci (key) yang sama tidak dapat memiliki beberapa map/pemetaan, namun value suatu key boleh sama dengan value di key lainnya. Interface map ini diimplementasikan oleh berbagai kelas seperti HashMap, TreeMap, dan lain-lain. Karena semua kelas turunan mengimplementasikan antarmuka map, kita dapat membuat objek map dengan salah satu dari kelas-kelas ini.
+
+Contoh:
+
+```java
+Map<T> hm = new HashMap<>(); 
+Map<T> tm = new TreeMap<>();
+```
+
+Di mana T adalah jenis objek. Implementasi Antarmuka Map yang sering digunakan adalah HashMap.
+
+#### a. HashMap
+HashMap menyediakan implementasi dasar dari Antarmuka Map Java. Objek ini menyimpan data dalam pasangan (Kunci, Nilai). Untuk mengakses nilai dalam HashMap, kita harus tahu kuncinya. HashMap menggunakan teknik yang disebut Hashing. Hashing adalah teknik mengonversi String besar menjadi String kecil yang mewakili String yang sama sehingga operasi indeks dan pencarian lebih cepat. HashSet juga menggunakan HashMap secara internal.
+
+Mari pahami HashMap dengan contoh:
+
+```java
+// Membuat HashMap dan menambahkan elemen
+HashMap<Integer, String> hm = new HashMap<Integer, String>();
+
+hm.put(1, "Lu punya uang");
+hm.put(2, "Lu punya kuasa");
+
+// Menemukan nilai untuk sebuah kunci
+System.out.println("Nilai untuk kunci 1 adalah " + hm.get(1));
+
+// Melintasi HashMap
+for (Map.Entry<Integer, String> e : hm.entrySet())
+    System.out.println(e.getKey() + " " + e.getValue());
+```
+
+# Bacaan Lebih Lanjut
+**Array:**  
+[Java Arrays (w3schools.com)](https://www.w3schools.com/java/java_arrays.asp)
+[Arrays (Java Platform SE 8 ) (oracle.com)](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
+
+**Collection**:
+[Collections in Java - javatpoint](https://www.javatpoint.com/collections-in-java)
+[Collection (Java Platform SE 8 ) (oracle.com)](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)
