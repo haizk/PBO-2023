@@ -105,7 +105,9 @@ System.out.println(arr[5]); // Ini akan menghasilkan ArrayIndexOutOfBoundsExcept
 
 ## Array Multidimensi
 
-Array multidimensi adalah struktur array yang terdiri dari array-array, di mana setiap elemen dalam array tersebut adalah referensi ke array lain. Istilah lain untuk array multidimensi adalah Array Bersarang. Array multidimensi dibentuk dengan menambahkan tanda kurung siku ([]) sesuai dengan jumlah dimensi.
+Array multidimensi adalah struktur array yang terdiri dari array-array, di mana setiap elemen dalam array tersebut adalah referensi ke array lain. Istilah lain untuk array multidimensi adalah Array Bersarang. Array multidimensi dibentuk dengan menambahkan tanda kurung siku ([]) sesuai dengan jumlah dimensi. Visualisasi dari array multidimensi dapat dilihat pada gambar berikut.  
+
+![Array Multidimensi](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Array%20Multidimensi.png)
 
 ### Syntax:
 
@@ -271,7 +273,9 @@ Selain itu, perlu diingat bahwa superclass langsung dari tipe array adalah java.
 
 ## Penyalinan Array
 
-Ketika menggandakan array satu dimensi seperti Object[], maka dilakukan "deep copy" dengan array baru yang berisi salinan elemen-elemen array asli bukan referensi (beneran bikin baru).
+Ketika menggandakan array satu dimensi seperti Object[], maka dilakukan "deep copy" dengan array baru yang berisi salinan elemen-elemen array asli bukan referensi (salinan membuat array yang benar-benar baru).  
+
+![Array DeepCopy](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Array%20Deepcopy.png)
 
 ```java
 // Program Java untuk mendemonstrasikan
@@ -302,7 +306,9 @@ false
 1 2 3 
 ```
 
-Saat Anda membuat salinan dari array multi-dimensi, salinan tersebut hanya membuat array baru, tetapi elemen-elemen dalam array merujuk (referensi) ke elemen-elemen dalam array yang asli. Jika ada subarray di dalam array utama, subarray tersebut tidak akan disalin sebagai array yang baru. Sebaliknya, subarray akan tetap menjadi referensi ke subarray asli dalam array aslinya. Jadi, jika Anda mengubah nilai di salah satu subarray dalam salinan shallow copy, perubahan itu juga akan terlihat dalam array asli.
+Saat Anda membuat salinan dari array multi-dimensi, salinan tersebut hanya membuat array baru, tetapi elemen-elemen dalam array merujuk (referensi) ke elemen-elemen dalam array yang asli. Jika ada subarray di dalam array utama, subarray tersebut tidak akan disalin sebagai array yang baru. Sebaliknya, subarray akan tetap menjadi referensi ke subarray asli dalam array aslinya. Jadi, jika Anda mengubah nilai di salah satu subarray dalam salinan shallow copy, perubahan itu juga akan terlihat dalam array asli.  
+
+![Array DeepCopy](https://github.com/haizk/PBO-2023/blob/main/W06_Array_and_Collection/Array%20ShallowCopy.png)
 
 ```java
 // Program Java untuk mendemonstrasikan
