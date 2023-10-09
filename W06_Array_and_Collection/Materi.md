@@ -421,17 +421,17 @@ Dengan Framework Collection, Anda dapat mengelola data lebih mudah dengan memanf
 ## Interface yang Mengembangkan Interface Collection
 Kerangka kerja collection ini memiliki beberapa interface di mana setiap interface digunakan untuk menyimpan jenis data tertentu. Berikut adalah interface yang ada dalam kerangka kerja ini.
 
-1. Interface Iterable
+### 1. Interface Iterable
 Interface ini adalah interface root untuk seluruh framework Collection. Interface collection membutuhkan iterasi. Oleh karena itu, secara inheren, semua interface dan kelas di bawahnya mengimplementasikan interface ini. Fungsi utama interface ini adalah menyediakan iterator untuk collection. Oleh karena itu, interface ini hanya berisi satu method abstrak, yaitu iterator.
 
     ```java
     Iterator iterator();
     ```
 
-2. Interface `Collection`
+### 2. Interface `Collection`
 Interface ini mengembangkan interface yang dapat diiterasi dan diimplementasikan oleh semua kelas dalam kerangka kerja collection. Interface ini berisi semua method dasar yang dimiliki setiap collection, seperti menambahkan data ke dalam collection, menghapus data, menghapus semua data, dan sebagainya. Semua method ini diimplementasikan dalam interface ini karena method-method ini diimplementasikan oleh semua kelas tanpa memandang style implementasinya. Dengan memiliki method-method ini, interface memastikan bahwa nama-nama method tersebut berlaku universal untuk semua collection. Oleh karena itu, kita dapat mengatakan bahwa interface ini membangun dasar di mana kelas-kelas collection diimplementasikan.
 
-## Interface List
+### 3. Interface List
 Interface ini adalah turunan dari interface collection. Interface ini memungkinkan data duplikat ada di dalamnya. Interface list ini diimplementasikan oleh berbagai kelas seperti ArrayList, LinkedList, Vector, dan lain-lain. Karena semua kelas turunan mengimplementasikan list, kita dapat membuat objek list dengan salah satu dari kelas-kelas ini.
 
 Contoh:
@@ -444,7 +444,7 @@ List<T> v = new Vector<>();
 
 Di mana T adalah tipe generik. Artinya, tipe ini dapat digantikan oleh objek yang memenuhi syarat apa pun pada saat proses berjalan, misalnya objek Integer, String, dan sebagainya. Kelas-kelas yang mengimplementasikan interface List adalah sebagai berikut:
 
-### ArrayList  
+#### ArrayList  
 ArrayList menyediakan array dinamis dalam Java. ArrayList berguna dalam program-program di mana banyak diperlukan manipulasi dalam array. Maka dari itu, ArrayList sering dipakai meskipun relatif lebih lambat dibanding array biasa. Ukuran ArrayList diperbesar secara otomatis jika collection bertambah atau menyusut jika objek dihapus dari collection. ArrayList Java memungkinkan kita untuk mengakses list secara acak. ArrayList tidak dapat digunakan untuk tipe data primitif seperti int, char, dll. Kita memerlukan wrapper classes untuk kasus-kasus tersebut (materi wrapper classes ada di bab 2 \[variabel dan tipe data\]).
 
 Contoh ArrayList:
@@ -468,7 +468,7 @@ for (int i = 0; i < al.size(); i++)
     System.out.print(al.get(i) + " ");
 ```
 
-### LinkedList  
+#### LinkedList  
 Kelas LinkedList adalah implementasi struktur data LinkedList yang merupakan struktur data linear di mana elemen-elemen tidak disimpan di lokasi berurutan dan setiap elemen adalah objek terpisah dengan bagian data dan bagian address-nya. Elemen-elemen dihubungkan menggunakan pointer dan address. Setiap elemen dikenal sebagai simpul/node.
 
 Contoh LinkedList:
@@ -492,7 +492,7 @@ for (int i = 0; i < ll.size(); i++)
     System.out.print(ll.get(i) + " ");
 ```
 
-### Vector  
+#### Vector  
 Vector juga memungkinkan pembuatan array dinamis dalam Java. Vector identik dengan ArrayList dalam hal implementasi. Namun, perbedaan utama antara vektor dan ArrayList adalah bahwa Vektor disinkronkan dan ArrayList tidak disinkronkan. Maksud dari "sinkronisasi" di sini adalah:
 
 **Vector:** Ketika Anda menggunakan Vector untuk menyimpan data, itu berarti operasi-operasi seperti penambahan, penghapusan, atau iterasi ke dalamnya akan secara otomatis dilindungi dari akses konkuren oleh beberapa thread. Artinya, hanya satu thread yang dapat mengakses Vector pada satu waktu. Hal ini memastikan keamanan dalam kasus penggunaan bersama (multithreaded) di mana beberapa thread dapat mengakses Vector secara bersamaan. Konsep ini akan dipelajari kemudian.
@@ -520,7 +520,7 @@ for (int i = 0; i < v.size(); i++)
     System.out.print(v.get(i) + " ");
 ```
 
-### Stack
+#### Stack
 Kelas Stack memodelkan dan mengimplementasikan struktur data Stack. Kelas ini didasarkan pada prinsip dasar *last-in-first-out* (LIFO). Selain operasi dasar push dan pop, kelas ini menyediakan tiga fungsi tambahan: `empty`, `search`, dan `peek`. Kelas ini juga dapat disebut sebagai subclass dari Vector.
 
 Contoh Stack:
@@ -553,3 +553,95 @@ while (itr.hasNext()) {
     System.out.print(itr.next() + " ");
 }
 ```
+
+### 4. Queue Interface
+Seperti namanya, interface queue menjaga urutan FIFO (First In First Out) seperti antrean di dunia nyata. Interface ini digunakan untuk menyimpan semua elemen di mana urutan elemen dianggap penting. Misalnya, ketika kita mencoba memesan tiket, tiket dijual berdasarkan prinsip first come first serve. Oleh karena itu, orang yang tiba pertama kali dalam queue akan mendapatkan tiket terlebih dahulu. Kita dapat membuat objek queue dengan salah satu dari kelas-kelas ini karena semua kelas turunan ini mengimplementasikan interface queue.
+
+Contohnya:
+
+```java
+Queue<T> pq = new PriorityQueue<>(); 
+Queue<T> ad = new ArrayDeque<>(); 
+```
+
+Implementasi interface queue yang paling sering digunakan adalah PriorityQueue.
+
+#### Prioritas Antrian (Priority Queue)  
+PriorityQueue digunakan ketika objek harus diproses berdasarkan prioritas. Meskipun queue mengikuti algoritma First-In-First-Out, kadang-kadang elemen-elemen dalam queue harus diproses sesuai dengan prioritas, maka kelas ini diperlukan. Elemen-elemen dalam priority queue diurutkan berdasarkan urutan alami, atau berdasarkan Comparator yang disediakan pada saat konstruksi queue, tergantung pada konstruktor mana yang digunakan.
+
+Mari kita pahami priority queue dengan contoh:
+
+```java
+PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>();
+
+pQueue.add(10);
+pQueue.add(20);
+pQueue.add(15);
+
+// Mencetak elemen teratas
+System.out.println(pQueue.peek());
+
+// Mencetak elemen teratas lalu menghapusnya dari container PriorityQueue
+System.out.println(pQueue.poll());
+
+// Mencetak elemen teratas
+System.out.println(pQueue.peek());
+```
+
+Output:
+
+```
+10
+10
+15
+```
+
+### 5. Interface Deque
+Deque, yang juga dikenal sebagai double-ended queue, adalah struktur data di mana kita dapat menambahkan dan menghapus elemen dari kedua ujung queue (double-ended). Interface ini meng-extend interface queue. Kelas yang mengimplementasikan interface ini adalah ArrayDeque. Karena kelas ArrayDeque mengimplementasikan interface Deque, kita dapat membuat objek deque dengan kelas ini.
+
+Contohnya:
+
+```java
+Deque<T> ad = new ArrayDeque<>(); 
+```
+
+Di mana T adalah tipe objek. Kelas yang mengimplementasikan interface deque adalah ArrayDeque.
+
+#### ArrayDeque  
+Kelas ArrayDeque yang diimplementasikan dalam framework collection memberikan cara untuk menerapkan array yang dapat disesuaikan ukurannya (resizable). Struktur ini merupakan jenis khusus dari array yang dapat tumbuh dan memungkinkan pengguna untuk menambah atau menghapus elemen dari kedua sisi queue. Array deque tidak memiliki batasan kapasitas dan akan tumbuh sesuai kebutuhan untuk mendukung penggunaan.
+
+Mari kita pahami ArrayDeque dengan contoh:
+
+```java
+
+ArrayDeque<Integer> deQueue = new ArrayDeque<Integer>(10);
+
+deQueue.add(10);
+deQueue.add(20);
+deQueue.add(30);
+deQueue.add(40);
+deQueue.add(50);
+
+System.out.println(deQueue);
+
+// menghapus semua elemen
+deQueue.clear();
+
+// menambah elemen pada head (depan)
+deQueue.addFirst(564);
+deQueue.addFirst(291);
+
+// menambah elemen pada tail (belakang)
+deQueue.addLast(24);
+deQueue.addLast(14);
+
+System.out.println(deQueue);
+```
+
+Output:
+
+```
+[10, 20, 30, 40, 50]
+[291, 564, 24, 14]
+```
+
