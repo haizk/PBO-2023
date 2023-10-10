@@ -288,10 +288,7 @@ class Test {
         int intArray[] = { 1, 2, 3 };
         int cloneArray[] = intArray.clone();
 
-        //
-
- Akan mencetak false karena deep copy dibuat
-        // untuk array satu dimensi
+        // Akan mencetak false karena deep copy dibuat untuk array satu dimensi
         System.out.println(intArray == cloneArray);
 
         for (int i = 0; i < cloneArray.length; i++) {
