@@ -193,12 +193,11 @@ if (pencocok.find()) {
 Parameter pertama dari Pattern.compile() nethod adakah pola/pattern yang mendeskripsikan apa yang sedang dicari.
 
 Berikut contoh penyusunan pola yang biasa digunakan :
-
-`[abc]`	: digunakan untuk mencocokkan satu karakter yang bisa berupa salah satu dari karakter yang ada dalam tanda kurung siku [abc]. Misalnya, [abc]at akan mencocokkan string "cat", "bat", atau "aat", tetapi tidak akan mencocokkan "rat" karena huruf "r" tidak termasuk dalam opsi di dalam tanda kurung siku.
-
-`[^abc]`: digunakan untuk mencocokkan satu karakter yang tidak ada dalam tanda kurung siku [^abc]. Misalnya, [^abc]at akan mencocokkan string "rat" karena huruf "r" tidak termasuk dalam opsi di dalam tanda kurung siku, tetapi tidak akan mencocokkan "cat" atau "bat" karena huruf "c" dan "b" termasuk dalam opsi tersebut.
-
-`[0-9]`	:  digunakan untuk mencocokkan satu karakter yang berada dalam rentang angka dari 0 hingga 9. Misalnya, [0-9]x akan mencocokkan string "1x", "5x", atau "9x", tetapi tidak akan mencocokkan "ax" karena "a" bukan angka dalam rentang tersebut.
+Bentuk Pola             | Deskripsi 
+---------------------------- | ------ 
+`[abc]`	| digunakan untuk mencocokkan satu karakter yang bisa berupa salah satu dari karakter yang ada dalam tanda kurung siku [abc]. Misalnya, [abc]at akan mencocokkan string "cat", "bat", atau "aat", tetapi tidak akan mencocokkan "rat" karena huruf "r" tidak termasuk dalam opsi di dalam tanda kurung siku.
+`[^abc]` | digunakan untuk mencocokkan satu karakter yang tidak ada dalam tanda kurung siku [^abc]. Misalnya, [^abc]at akan mencocokkan string "rat" karena huruf "r" tidak termasuk dalam opsi di dalam tanda kurung siku, tetapi tidak akan mencocokkan "cat" atau "bat" karena huruf "c" dan "b" termasuk dalam opsi tersebut.
+`[0-9]`	|  digunakan untuk mencocokkan satu karakter yang berada dalam rentang angka dari 0 hingga 9. Misalnya, [0-9]x akan mencocokkan string "1x", "5x", atau "9x", tetapi tidak akan mencocokkan "ax" karena "a" bukan angka dalam rentang tersebut.
 
 Braket `[ ]` diatas digunakan untuk mendefinisikan range dari charactersnya.
 ### 5.3.2.1 Metacharacters
