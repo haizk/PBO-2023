@@ -23,7 +23,7 @@ Format penulisan nama file adalah **PPBO_02_NIM**, dengan isi file sebagai berik
 
 // import ...
 
-public class PPBO_01_NIM {
+public class PPBO_02_NIM {
     public static void main(String[] args) {
         // ...
     }
