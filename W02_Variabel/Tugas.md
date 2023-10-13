@@ -16,6 +16,17 @@ Anda adalah seorang pemrogram yang diberi tugas untuk membuat program sederhana 
 
 6. **Konstanta**: Gunakan konstanta untuk mendefinisikan pajak pertambahan nilai sebesar 11% yang digunakan di setiap pembelian.
 
-## Penilaian:
+Format penulisan nama file adalah **PPBO_02_NIM**, dengan isi file sebagai berikut:
+```java
+// Nama : ...
+// NIM  : ...
 
-Tugas ini memberikan pemahaman tentang konsep-konsep dasar pemrograman seperti array, variabel static dan non-static, variabel lokal, parameter, serta penggunaan konstanta dalam konteks manajemen Swalayan sederhana.
+// import ...
+
+public class PPBO_01_NIM {
+    public static void main(String[] args) {
+        // ...
+    }
+}
+
+// class ...
