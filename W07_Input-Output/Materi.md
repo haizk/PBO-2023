@@ -168,3 +168,8 @@ try {
     System.out.println("Terjadi kesalahan: " + e.getMessage());
 }
 ```
+
+# Bacaan
+1. [Java - Input Output](https://www.petanikode.com/java-input-output/)
+2. [Java - User Input](https://www.w3schools.com/java/java_user_input.asp)
+3. [Java - Console Input Output](https://www.baeldung.com/java-console-input-output)
