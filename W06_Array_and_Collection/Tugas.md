@@ -1,6 +1,6 @@
 # Tugas Array dan Collection
 
-Gunakan minimal dua koleksi (Set, List, Queue, atau Map) dengan mengambil inspirasi dari kehidupan nyata (misal antrean tiket sederhana) dan implementasikan program Java yang menunjukkan penggunaan struktur data tersebut. Program Anda harus dapat melakukan operasi dasar seperti menambahkan, menghapus, dan mencari elemen dalam struktur data yang Anda pilih.
+Gunakan minimal satu koleksi (Set, List, Queue, atau Map) dengan mengambil inspirasi dari kehidupan nyata (misal antrean tiket sederhana) dan implementasikan program Java yang menunjukkan penggunaan struktur data tersebut. Program Anda harus dapat melakukan operasi dasar seperti menambahkan, menghapus, dan mencari elemen dalam struktur data yang Anda pilih.
 
 ## Ketentuan Tugas
 ### 1. Pilih salah satu kelas atau lebih dari dari framework Collection berikut:
