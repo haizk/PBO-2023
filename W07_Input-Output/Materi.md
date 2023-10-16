@@ -1,7 +1,7 @@
 # Input
 Seperti dalam bahasa pemrograman yang sudah kalian pelajari sebelumnya terdapat kata Input, Input merupakan nilai yang kita masukan ke program atau ke sebuah variabel yang kita inginkan. Java sendiri memiliki 3 class untuk menambil input yaitu Class Scanner, Class BufferReader, dan Class Console.
 
-## 1 Class Scanner
+## 1. Class Scanner
 Scanner class dalam java adalah sebuah kelas yang terdapat di paket java.util yang digunakan untuk mendapatkan input dari pengguna berupa tipe data primitif seperti int, double, dll. dan string. Scanner class dalam java juga dapat digunakan untuk membaca input dari file teks atau biner dengan menggunakan pola pemisah yang ditentukan oleh ekspresi reguler. Scanner class dalam java memudahkan kita untuk membuat program yang interaktif dengan pengguna atau untuk memproses data dari file.
 
 ### Method untuk membaca input dalam scanner
@@ -30,7 +30,7 @@ Scanner class dalam java adalah sebuah kelas yang terdapat di paket java.util ya
             System.err.println("File tidak ditemukan.");
         }
 ```
-## 2 Class BufferReader
+## 2. Class BufferReader
 Class BufferedReader dalam java adalah sebuah kelas yang digunakan untuk membaca teks dari input stream berbasis karakter. Kelas ini dapat digunakan untuk membaca data baris demi baris dengan menggunakan method readLine(). Kelas ini juga membuat kinerja menjadi lebih cepat karena memiliki buffer internal yang menyimpan karakter-karakter yang dibaca. Kelas ini merupakan turunan dari kelas Reader yang juga dapat membaca input dari user serta file
 
 ### Contoh penggunaan BufferReader untuk menerima input dari keyboard
@@ -70,7 +70,7 @@ Class BufferedReader dalam java adalah sebuah kelas yang digunakan untuk membaca
             e.printStackTrace();
         }
 ```
-## 3 Class Console
+## 3. Class Console
 Class Console dalam java adalah sebuah kelas yang digunakan untuk mendapatkan input dari konsol. Kelas ini menyediakan metode untuk membaca teks dan password. Jika anda membaca password menggunakan kelas Console, password tersebut tidak akan ditampilkan kepada pengguna. Kelas java.io.Console ini terhubung dengan konsol sistem secara internal. Kelas Console ini diperkenalkan sejak versi 1.5
 
 ### Method di Class Console
@@ -122,7 +122,7 @@ Output pada java adalah cara untuk menampilkan hasil dari program java ke layar,
 - `println()`: Metode ini digunakan untuk mencetak argumen dengan pindah baris. Jika ingin mencetak lebih dari satu argumen, maka harus dipisahkan dengan operator +. Contoh: `System.out.println("Hello" + "World");`
 - `printf()`: Metode ini digunakan untuk mencetak argumen dengan format tertentu. Format ini ditentukan oleh string format yang berisi spesifikasi konversi yang menunjukkan bagaimana argumen akan ditampilkan. Contoh: `System.out.printf("Nama: %s, Umur: %d", "Budi", 20);`
 
-# Tambahan (Method '`.close()`)
+# Tambahan (Method `.close()`)
 
 Metode close() dalam input java adalah metode yang digunakan untuk menutup koneksi input stream. Input stream adalah aliran data yang masuk ke program java dari suatu sumber, seperti keyboard, file, jaringan, dll. Koneksi input stream harus ditutup setelah selesai digunakan untuk menghemat sumber daya dan mencegah kebocoran memori. Jika koneksi input stream tidak ditutup, maka data yang masuk mungkin tidak dapat dibaca dengan benar atau menyebabkan konflik dengan input stream lainnya.
 
