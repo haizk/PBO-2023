@@ -9,7 +9,7 @@ Scanner class dalam java adalah sebuah kelas yang terdapat di paket java.util ya
 
 ### Contoh penggunaan Scanner menerima input dari keyboard
 ```java
- Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Masukkan sebuah teks: ");
         String input = scanner.nextLine();
