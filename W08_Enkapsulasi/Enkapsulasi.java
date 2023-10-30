@@ -1,4 +1,4 @@
-public class Mahasiswa {
+class Mahasiswa {
     // Atribut atau variabel yang dienkapsulasi
     private String nama;
     private String nim;
