@@ -1,4 +1,4 @@
-# ENKAPSULASI
+# Enkapsulasi
 Enkapsulasi, yang diambil dari bahasa Inggris "encapsulation", berasal dari kata dasar "capsule" yang dapat diartikan sebagai suatu hal yang melindungi hal lain yang ada didalamnya. Konsep enkapsulasi pada bahasa pemrograman berbasis objek merupakan sebuah konsep dimana kita sebagai programmer menyembunyikan data-data sensitif dari class yang kita buat dari pengguna.
 
 Di Java, enkapsulasi dicapai dengan mendeklarasikan variabel instan suatu kelas sebagai private, yang berarti variabel tersebut hanya dapat diakses di dalam kelas tersebut. Untuk mengizinkan akses luar terhadap variabel instan, metode publik yang disebut getter dan setter didefinisikan, yang masing-masing digunakan untuk mengambil dan mengubah nilai variabel instan. Dengan menggunakan getter dan setter, kelas dapat menerapkan aturan validasi datanya sendiri dan memastikan bahwa status internalnya tetap konsisten.
