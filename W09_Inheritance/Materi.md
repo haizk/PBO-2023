@@ -63,7 +63,7 @@ class Subclass extends Superclass {
 ```
 Dalam contoh di atas, class **Subclass** memiliki **method** dengan nama yang sama dengan **method** yang sudah ada di **Superclass**. **Method** baru tersebut memiliki **behavior** yang berbeda dengan **method** yang sudah ada di **Superclass**. Berikut contoh penggunaan **method overriding**.
 ```java
-class Main {
+public class Main {
     public static void main(String[] args) {
         Superclass superclass = new Superclass();
         superclass.method(); // Superclass method
@@ -134,7 +134,7 @@ class Subclass extends Superclass {
     }
 }
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         Subclass subclass = new Subclass();
         subclass.method();
@@ -159,7 +159,7 @@ class Subclass extends Superclass {
         System.out.println(super.number); // 10
     }
 }
-class Main {
+public class Main {
     public static void main(String[] args) {
         Subclass subclass = new Subclass();
         subclass.method();
@@ -182,7 +182,7 @@ class Subclass extends Superclass {
         System.out.println(super.number); // 10
     }
 }
-class Main {
+public class Main {
     public static void main(String[] args) {
         Subclass subclass = new Subclass();
         subclass.method();
@@ -213,7 +213,7 @@ class Subclass extends Superclass{
     }
 }
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         Subclass subclass = new Subclass();
     }
@@ -254,7 +254,7 @@ class Subclass extends Superclass{
     }
 }
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         Subclass subclass1 = new Subclass();
         Subclass subclass2 = new Subclass(10);
@@ -290,7 +290,7 @@ class Subclass extends Superclass{
     }
 }
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         Subclass subclass = new Subclass(10);
     }
@@ -327,7 +327,7 @@ class Subclass extends Superclass {
     }
 }
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         Subclass subclass = new Subclass();
         subclass = null;
@@ -372,7 +372,7 @@ class Cat extends Animal {
     }
 }
 
-class Main {
+public class Main {
     public static void main(String[] args) {
         Dog dog1 = new Dog("Buddy");
         dog1.animalInfo();
