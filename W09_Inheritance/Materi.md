@@ -344,7 +344,7 @@ Superclass destructor
 ```
 
 ## An Example of Using the Static Keyword in the Context of Inheritance
-**Static keyword** adalah keyword yang digunakan untuk membuat **properties** dan **methods** yang dapat diakses tanpa harus membuat objek terlebih dahulu. Berikut contoh penggunaan **static keyword** di **inheritance**.
+**Static keyword** adalah keyword yang digunakan untuk membuat **properties** dan **methods** yang dapat diakses tanpa harus membuat objek terlebih dahulu, dan membuat **properties** dan **methods** menjadi terikat kepada **class** bukan **objek**. Berikut contoh penggunaan **static keyword** dalam konsep **inheritance**.
 ```java
 class Animal {
     static int numberOfAnimals = 0;
