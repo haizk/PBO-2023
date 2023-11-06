@@ -393,3 +393,16 @@ Animal: Max
 Animal: Whiskers
 Total number of animals: 3
 ```
+
+# Bacaan
+- [Inheritance](https://www.w3schools.com/java/java_inheritance.asp)
+- [Java Inheritance](https://www.geeksforgeeks.org/inheritance-in-java/)
+- [Java Inheritance (Tutorials Point)](https://www.tutorialspoint.com/java/java_inheritance.htm)
+- [Java Inheritance (Javatpoint)](https://www.javatpoint.com/inheritance-in-java)
+- [Java Super Keyword](https://www.w3schools.com/java/ref_keyword_super.asp)
+- [Java Super Keyword (Javatpoint)](https://www.javatpoint.com/super-keyword)
+- [Java Final Keyword (Javatpoint)](https://www.javatpoint.com/final-keyword)
+- [Java Static Keyword (Javatpoint)](https://www.javatpoint.com/static-keyword-in-java)
+- [Java Constructor](https://www.w3schools.com/java/java_constructors.asp)
+- [Java Constructor (Javatpoint)](https://www.javatpoint.com/java-constructor)
+- [Belajar Java: Inheritance](https://www.petanikode.com/java-oop-inheritance/)
