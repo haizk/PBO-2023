@@ -18,7 +18,7 @@ Format penulisan nama file adalah **PPBO_09_NIM**, dengan isi file sebagai berik
 
 // import ...
 
-public class PPBO_07_NIM {
+public class PPBO_09_NIM {
     public static void main(String[] args) {
         // ...
     }
