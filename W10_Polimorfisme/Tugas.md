@@ -1,10 +1,10 @@
 # Tugas  
 
 Sebuah perusahaan membayar karyawannya setiap minggu. Karyawan terdiri dari empat jenis:
-- Karyawan gaji tetap: yang dibayar dengan gaji mingguan tetap tanpa memandang jumlah jam kerja
-- Karyawan per jam: dibayar berdasarkan jumlah jam kerja kontrak,
+- Karyawan gaji tetap: yang dibayar dengan gaji pokok mingguan tetap tanpa memandang jumlah jam kerja
+- Karyawan per jam: dibayar berdasarkan jumlah jam kerja mereka,
 - Karyawan komisi: dibayar dalam persentase dari penjualan mereka
-- Karyawan komisi plus: yang menerima gaji menerima gaji pokok ditambah persentase dari penjualan mereka.
+- Karyawan komisi plus: yang menerima gaji menerima gaji pokok mingguan ditambah persentase dari penjualan mereka.
 
 Untuk periode pembayaran saat ini, perusahaan telah memutuskan untuk memberikan penghargaan kepada karyawan yang menerima komisi dengan menambahkan 10% ke gaji pokok mereka. Perusahaan ingin mengimplementasikan aplikasi Java yang melakukan perhitungan penggajian dengan menerapkan polimorfisme.
 
@@ -13,7 +13,7 @@ Kalian bebas untuk:
 - menentukan jumlah jam kerja dari setiap karyawan per jam
 - menentukan jumlah penjualan setiap karyawan komisi dan karyawan komisi plus
 - menentukan gaji pokok karyawan komisi plus
-- Mengkreasikan program sesuai batasan di bawah:
+- Mengkreasikan program selama masih sesuai dengan batasan di bawah:
 
 Kalian wajib untuk:
 - Menerapkan method overloading, (penjelasan terdapat pada bagian compiled-time polymorphism)
