@@ -1,6 +1,8 @@
 # Polimorfisme  
 Kata "polimorfisme" berasal dari bahasa Yunani, di mana "poly" berarti banyak, dan "morphe" berarti bentuk. Jadi, secara harfiah, "polimorfisme" berarti memiliki banyak bentuk. Dalam konteks pemrograman, konsep polimorfisme mengacu pada kemampuan suatu objek untuk memiliki banyak tampilan atau perilaku, sesuai dengan konteks atau jenisnya. Polimorfisme menjadi konsep penting dalam pemrograman berorientasi objek yang memungkinkan objek dari kelas yang berbeda untuk diakses dan digunakan melalui antarmuka yang sama. Sederhananya, ini berarti kita dapat menggunakan suatu antarmuka atau kelas dasar untuk mengakses objek-objek yang mungkin memiliki implementasi yang berbeda. Dalam Java, polimorfisme dapat diimplementasikan pada tingkat kompilasi (compile time) dan pada tingkat runtime (runtime), memberikan fleksibilitas dan kemampuan untuk menangani berbagai tipe objek.
 
+![Diagram Polimorfisme](https://github.com/haizk/PBO-2023/blob/main/W10_Polimorfisme/diagram.jpg)
+
 ## Compile Time Polymorphism  
 Compile time polymorphism terjadi pada saat kompilasi program. Hal ini mencakup dua konsep utama: method overloading dan operator polymorphism. Saat program dikompilasi, kompiler menentukan metode atau operator mana yang harus dipanggil berdasarkan jumlah dan tipe parameter atau tipe operand yang digunakan.
 
@@ -163,6 +165,72 @@ class Wolf extends Animal {
 | **Pemilihan Metode**                   | Terjadi berdasarkan tipe dan jumlah parameter pada saat kompilasi. | Terjadi pada saat runtime, berdasarkan objek aktual yang diakses. |
 | **Konsep Utama**                       | Method overloading dan operator polymorphism. | Method overriding. |
 | **Keuntungan Utama**                   | Peningkatan keterbacaan dan pemeliharaan kode. | Fleksibilitas dan kemampuan untuk menangani objek dari kelas turunan dengan cara yang dinamis. |
+
+## Perbedaan Method Overloading dan Method Overriding  
+| Kriteria                          | Method Overloading                              | Method Overriding                              |
+|-----------------------------------|-------------------------------------------------|-------------------------------------------------|
+| **Definisi**                      | Dua atau lebih metode dalam satu kelas dengan nama yang sama tetapi dengan parameter yang berbeda. | Metode dalam kelas turunan menggantikan atau memberikan implementasi kembali dari metode yang ada di kelas induk. |
+| **Kelas yang Terlibat**           | Terjadi dalam satu kelas.                       | Terjadi antara kelas induk dan kelas turunan.   |
+| **Parameter**                     | Jumlah atau tipe parameter harus berbeda.      | Jumlah dan tipe parameter harus sama.           |
+| **Keyword yang Digunakan**        | Tidak ada kata kunci spesifik yang digunakan.   | Sering menggunakan kata kunci `@Override` untuk menunjukkan bahwa ini adalah metode yang di-*override* (Jika tidak digunakan tidak apa-apa) |
+| **Ketentuan Kompilasi**           | Kompilasi berdasarkan jumlah atau tipe parameter yang berbeda. | Kompilasi berhasil jika ada metode dengan nama, tipe, dan jumlah parameter yang sama di kelas induk. Jika tidak, akan ada error kompilasi. |
+| **Hubungan Antar Metode**         | Independen satu sama lain, tanpa memperhatikan hubungan kelas. | Menciptakan hubungan antara metode di kelas induk dan kelas turunan, memungkinkan untuk polymorphism pada runtime. |
+| **Pewarisan vs. Independen**      | Independen dari pewarisan.                    | Terkait dengan pewarisan; metode yang sama diwariskan dan diberikan implementasi yang berbeda di kelas turunan. |  
+
+![Diagram Polimorfisme](https://github.com/haizk/PBO-2023/blob/main/W10_Polimorfisme/differences.jpg?raw=true)
+
+## Keuntungan dan Kerugian Penggunaan Polimorfisme  
+
+**Keuntungan Polimorfisme dalam Java:**
+1. **Memungkinkan Kode yang Sama Dipakai Berulang:** Misalnya kita menulis kode untuk sesuatu yang berlaku untuk semua kelas (misalnya hewan), kita hanya perlu menuliskannya satu kali dan itu akan berfungsi untuk semua kelas turunannya (semua jenis hewan). 
+
+2. **Meningkatkan Keterbacaan dan Pemeliharaan Kode:** Dengan mengurangi jumlah kode yang perlu ditulis dan dipelihara, kode menjadi lebih mudah dibaca dan efisien, sehingga mudah diperbaiki jika ada kesalahan.
+
+3. **Mendukung Binding Dinamis:** Dukungan untuk binding dinamis memungkinkan pemanggilan metode yang tepat pada saat runtime, berdasarkan kelas  yang sebenarnya dari objek. Binding merujuk pada kaitan antara suatu nama (seperti nama metode atau variabel) dengan implementasinya. Ada dua jenis binding dalam pemrograman berorientasi objek: binding statis (atau early binding) dan binding dinamis (atau late binding).
+
+- **Statis (Early) Binding:** Terjadi pada saat kompilasi di mana kaitan antara nama dan implementasi sudah ditentukan. Hal ini umumnya terkait dengan metode overloading dan binding terjadi sebelum program dijalankan.
+
+- **Dinamis (Late) Binding:** Terjadi pada saat runtime di mana kaitan antara nama dan implementasinya ditentukan saat program dijalankan. Hal ini terkait dengan konsep polimorfisme dan terutama dengan metode overriding.
+
+4. **Memungkinkan Objek Diperlakukan Sebagai Satu Tipe:** Hal ini merujuk pada kemampuan untuk menganggap objek dari berbagai kelas yang berbeda sebagai objek dari tipe yang sama, terutama dalam konteks polimorfisme.
+
+Contoh: Jika ada kelas "Hewan" dan kelas "Mobil," dan keduanya memiliki metode "bersuara," dengan polimorfisme, kita dapat memperlakukan objek dari kedua kelas ini sebagai objek dari tipe umum "Suara." Dengan kata lain, meskipun kelas-kelas ini berbeda, kita dapat mengakses metode "bersuara" dari keduanya sebagai objek dari tipe yang sama.
+
+```java
+// Contoh menggunakan Java
+class Hewan {
+    void bersuara() {
+        System.out.println("Bunyi hewan");
+    }
+}
+
+class Mobil {
+    void bersuara() {
+        System.out.println("Bunyi mobil");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Hewan kucing = new Hewan();
+        Mobil sedan = new Mobil();
+
+        // Polimorfisme - Objek diperlakukan sebagai satu tipe
+        Hewan binatang1 = kucing;
+        Hewan binatang2 = sedan;
+
+        binatang1.bersuara();  // Output: Bunyi hewan
+        binatang2.bersuara();  // Output: Bunyi mobil
+    }
+}
+```
+
+Dalam contoh ini, objek dari kelas "Hewan" dan "Mobil" diperlakukan sebagai objek dari tipe "Hewan," memungkinkan kita untuk menggunakan polimorfisme untuk mengakses metode yang sama pada kedua objek.  
+
+**Kerugian Polimorfisme dalam Java:**
+1. **Meningkatkan Kesulitan Memahami Perilaku Objek:** Polimorfisme dapat membuat lebih sulit memahami perilaku suatu objek, terutama jika kode tersebut kompleks.
+
+2. **Potensial Masalah Kinerja:** Penggunaan polimorfisme dapat menyebabkan masalah kinerja karena perilaku polimorfik dapat memerlukan perhitungan tambahan pada saat runtime.
 
 ## Contoh Penerapan Polimorfisme
 
@@ -453,3 +521,22 @@ public class Main {
 **Penjelasan:**
 - Dalam contoh ini, kita memiliki kelas `MathOperation` dengan metode penambahan yang berbeda untuk tipe data int dan double.
 - Melalui metode polimorfik, kita dapat menambahkan angka dengan metode generik tanpa mempedulikan jenis data yang spesifik.
+
+## Bacaan Lebih Lanjut
+Untuk mendalami konsep polimorfisme dan konsep lain dalam pemrograman berorientasi objek, Anda dapat merujuk pada sumber-sumber berikut:
+
+### Dokumentasi Resmi:
+
+1. **[The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/):** Panduan resmi dari Oracle memberikan penjelasan rinci tentang konsep OOP, termasuk polimorfisme dalam bahasa Java.
+
+### Sumber Online:
+
+1. **[GeeksforGeeks - Polymorphism in Java](https://www.geeksforgeeks.org/polymorphism-in-java/):** Artikel ini memberikan penjelasan rinci tentang berbagai jenis polimorfisme dalam Java.
+
+2. **[Tutorialspoint - Java Polymorphism](https://www.tutorialspoint.com/java/java_polymorphism.htm):** Tutorialspoint menyediakan tutorial yang mudah dimengerti tentang konsep polimorfisme dalam Java.
+
+3. **[W3Schools - Java Polymorphism](https://www.w3schools.com/java/java_polymorphism.asp):** W3Schools memberikan tutorial singkat dan contoh untuk pemahaman cepat tentang polimorfisme.
+
+### Forum dan Komunitas:
+
+1. **[Stack Overflow](https://stackoverflow.com/):** Platform ini dapat membantu Anda dengan pertanyaan spesifik dan memahami masalah atau konsep tertentu yang berkaitan dengan polimorfisme.
