@@ -170,7 +170,7 @@ class Wolf extends Animal {
 | Kriteria                          | Method Overloading                              | Method Overriding                              |
 |-----------------------------------|-------------------------------------------------|-------------------------------------------------|
 | **Definisi**                      | Dua atau lebih metode dalam satu kelas dengan nama yang sama tetapi dengan parameter yang berbeda. | Metode dalam kelas turunan menggantikan atau memberikan implementasi kembali dari metode yang ada di kelas induk. |
-| **Kelas yang Terlibat**           | Terjadi dalam satu kelas.                       | Terjadi antara kelas induk dan kelas turunan.   |
+| **Kelas yang Terlibat**           | Bisa terjadi dalam satu kelas.                       | Hanya bisa terjadi antara kelas induk dan kelas turunan.   |
 | **Parameter**                     | Jumlah atau tipe parameter harus berbeda.      | Jumlah dan tipe parameter harus sama.           |
 | **Keyword yang Digunakan**        | Tidak ada kata kunci spesifik yang digunakan.   | Sering menggunakan kata kunci `@Override` untuk menunjukkan bahwa ini adalah metode yang di-*override* (Jika tidak digunakan tidak apa-apa) |
 | **Ketentuan Kompilasi**           | Kompilasi berdasarkan jumlah atau tipe parameter yang berbeda. | Kompilasi berhasil jika ada metode dengan nama, tipe, dan jumlah parameter yang sama di kelas induk. Jika tidak, akan ada error kompilasi. |
