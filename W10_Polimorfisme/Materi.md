@@ -523,7 +523,7 @@ public class Main {
 - Melalui metode polimorfik, kita dapat menambahkan angka dengan metode generik tanpa mempedulikan jenis data yang spesifik.
 
 ## Bacaan Lebih Lanjut
-Untuk mendalami konsep polimorfisme dan konsep lain dalam pemrograman berorientasi objek, Anda dapat merujuk pada sumber-sumber berikut:
+Untuk mendalami konsep polimorfisme dan konsep lain dalam pemrograman berorientasi objek, silakan merujuk pada sumber-sumber berikut:
 
 ### Dokumentasi Resmi:
 
@@ -539,4 +539,4 @@ Untuk mendalami konsep polimorfisme dan konsep lain dalam pemrograman berorienta
 
 ### Forum dan Komunitas:
 
-1. **[Stack Overflow](https://stackoverflow.com/):** Platform ini dapat membantu Anda dengan pertanyaan spesifik dan memahami masalah atau konsep tertentu yang berkaitan dengan polimorfisme.
+1. **[Stack Overflow](https://stackoverflow.com/):** Platform ini dapat membantu dengan pertanyaan spesifik dan memahami masalah atau konsep tertentu yang berkaitan dengan polimorfisme.
