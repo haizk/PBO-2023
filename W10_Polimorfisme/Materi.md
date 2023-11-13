@@ -423,7 +423,8 @@ Pet = new Wolf();
 
 ### 4. Contoh Lain
 
-#### 1. Operator Overloading (Ad-Hoc Polymorphism)
+#### 1. Operator Overloading (Ad-Hoc Polymorphism)  
+Ad-Hoc Polymorphism adalah teknik yang digunakan untuk mendefinisikan method yang sama dengan implementasi berbeda dan argumen berbeda.
 
 **Operator Overloading untuk Bilangan Kompleks:**
 
@@ -458,7 +459,8 @@ public class Main {
 - Dalam contoh ini, kita memiliki representasi bilangan kompleks dengan bagian riil dan imajiner.
 - Operator overloading digunakan untuk mengizinkan kita menambahkan dua objek bilangan kompleks dengan cara yang intuitif, seperti `num1 + num2`.
 
-#### 2. Generics (Parametric Polymorphism)
+#### 2. Generics (Parametric Polymorphism)  
+Parametric polymorphism, juga dikenal sebagai generic programming, adalah konsep dalam pemrograman komputer di mana suatu fungsi atau tipe data dapat bekerja dengan berbagai jenis data tanpa menggantungkan diri pada tipe data tertentu.
 
 **Generic Box:**
 
@@ -490,7 +492,8 @@ public class Main {
 - Dalam contoh ini, kita memiliki kelas `Box` yang dapat menampung berbagai jenis tipe data, seperti kotak angka atau kotak kata.
 - Generics memungkinkan kita membuat kelas yang bersifat umum tanpa harus menentukan tipe data secara spesifik.
 
-#### 3. Metode Polimorfik (Polymorphic Algorithms)
+#### 3. Metode Polimorfik (Polymorphic Algorithms)  
+Polymorphic algorithms merujuk pada konsep dalam pemrograman komputer di mana suatu algoritma dapat bekerja dengan berbagai tipe data atau objek, terlepas dari tipe data atau struktur data khusus yang digunakan.  
 
 **Metode Polimorfik untuk Penambahan:**
 
