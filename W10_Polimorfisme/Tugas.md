@@ -4,7 +4,7 @@ Sebuah perusahaan membayar karyawannya setiap minggu. Karyawan terdiri dari empa
 - Karyawan gaji tetap: yang dibayar dengan gaji pokok mingguan tetap tanpa memandang jumlah jam kerja
 - Karyawan per jam: dibayar berdasarkan jumlah jam kerja mereka,
 - Karyawan komisi: dibayar dalam persentase dari penjualan mereka
-- Karyawan komisi plus: yang menerima gaji menerima gaji pokok mingguan ditambah persentase dari penjualan mereka.
+- Karyawan komisi plus: yang menerima gaji pokok mingguan ditambah persentase dari penjualan mereka.
 
 Untuk periode pembayaran saat ini, perusahaan telah memutuskan untuk memberikan penghargaan kepada karyawan yang menerima komisi dengan menambahkan 10% ke gaji pokok mereka. Perusahaan ingin mengimplementasikan aplikasi Java yang melakukan perhitungan penggajian dengan menerapkan polimorfisme.
 
