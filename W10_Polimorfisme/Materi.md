@@ -192,39 +192,6 @@ class Wolf extends Animal {
 
 - **Dinamis (Late) Binding:** Terjadi pada saat runtime di mana kaitan antara nama dan implementasinya ditentukan saat program dijalankan. Hal ini terkait dengan konsep polimorfisme dan terutama dengan metode overriding.
 
-4. **Memungkinkan Objek Diperlakukan Sebagai Satu Tipe:** Hal ini merujuk pada kemampuan untuk menganggap objek dari berbagai kelas yang berbeda sebagai objek dari tipe yang sama, terutama dalam konteks polimorfisme.
-
-Contoh: Jika ada kelas "Hewan" dan kelas "Mobil," dan keduanya memiliki metode "bersuara," dengan polimorfisme, kita dapat memperlakukan objek dari kedua kelas ini sebagai objek dari tipe umum "Suara." Dengan kata lain, meskipun kelas-kelas ini berbeda, kita dapat mengakses metode "bersuara" dari keduanya sebagai objek dari tipe yang sama.
-
-```java
-// Contoh menggunakan Java
-class Hewan {
-    void bersuara() {
-        System.out.println("Bunyi hewan");
-    }
-}
-
-class Mobil {
-    void bersuara() {
-        System.out.println("Bunyi mobil");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Hewan kucing = new Hewan();
-        Mobil sedan = new Mobil();
-
-        // Polimorfisme - Objek diperlakukan sebagai satu tipe
-        Hewan binatang1 = kucing;
-        Hewan binatang2 = sedan;
-
-        binatang1.bersuara();  // Output: Bunyi hewan
-        binatang2.bersuara();  // Output: Bunyi mobil
-    }
-}
-```
-
 Dalam contoh ini, objek dari kelas "Hewan" dan "Mobil" diperlakukan sebagai objek dari tipe "Hewan," memungkinkan kita untuk menggunakan polimorfisme untuk mengakses metode yang sama pada kedua objek.  
 
 **Kerugian Polimorfisme dalam Java:**
