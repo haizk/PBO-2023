@@ -409,9 +409,7 @@ class Wolf extends Animal {
 
 public class Main {
     public static void main(String[] args) {
-        Animal my
-
-Pet = new Wolf();
+        Animal myPet = new Wolf();
         myPet.makeSound();  // Output: Wolf roars
     }
 }
