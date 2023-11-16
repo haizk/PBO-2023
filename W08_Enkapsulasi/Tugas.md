@@ -11,3 +11,20 @@ Persyaratan Tugas:
 - Buatlah Main Class yang menggunakan kelas yang telah anda ini untuk membuat beberapa objek, mengatur atribut-atributnya, dan menampilkan informasinya.
 
 Pastikan Anda telah memahami prinsip enkapsulasi dalam tugas ini dan menambahkan komentar untuk menjelaskan kode Anda sangat dihargai. Tugas ini akan membantu Anda memahami cara mengimplementasikan enkapsulasi dalam Java. Selamat mengerjakan!
+
+Format penulisan nama file adalah **PPBO_08_NIM**, dengan isi file sebagai berikut:
+
+```java
+// Nama : ...
+// NIM  : ...
+
+// import ...
+
+public class PPBO_08_NIM {
+    public static void main(String[] args) {
+        // ...
+    }
+}
+
+// class ...
+```
