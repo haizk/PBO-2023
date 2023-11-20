@@ -92,7 +92,22 @@ public class Main1 {
     }
 }
 ```
+# Perbedaan ABstract Class dan Interface
+1. **Abstract Class**:
+    - Didefinisikan sebagai kelas yang dinyatakan dengan kata kunci “abstract”.
+    - Ini adalah kumpulan karakteristik subkelas umum yang harus mencakup setidaknya satu metode abstract.
+    - Kelas abstract dapat memiliki beberapa metode concrete.
+    - Kelas abstract tidak dapat diinisiasi, yang berarti kita tidak dapat membuat objek dengannya.
+    - Programmer menggunakan abstract class Java ketika mereka membutuhkan fungsionalitas default untuk subkelas, template untuk kelas tertentu di masa mendatang, menentukan interface umum untuk subkelas apa pun, dan reusabilitas kode1.
 
+2. **Interface**:
+    - Interface adalah blue print yang digunakan untuk mengimplementasikan kelas.
+    - Ini adalah kumpulan metode abstract dan tidak mengandung metode concrete, tidak seperti kelas abstract.
+    - Interface menawarkan abstraksi penuh di Java, sesuatu yang tidak dapat dilakukan kelas abstract.
+    - Interface tidak dapat diinisiasi, meskipun kelas abstract yang mengimplementasikan interface dapat melakukannya.
+    - Programmer menggunakan interface saat mereka membutuhkan untuk mencapai abstraksi, untuk mendukung resolusi yang dinamis saat proses run time, mencapai loose coupling, dan memisahkan definisi metode dari hierarki inheritance1.
+
+Harap dicatat bahwa suatu abstract class hanya bisa meng-extend satu abstract class lainnya, sedangkan suatu interface bisa meng-extend satu atau lebih interface lainnya. Abstract class hanya bisa meng-extend satu abstract class dan meng-implement beberapa interface. Suatu interface hanya bisa meng-extend interface lainnya dan tidak bisa meng-implement class atau interface
 ### Bacaan
 1. [Baeldung - Java Abstract Class](https://www.baeldung.com/java-abstract-class)
 2. [Petani Kode - Java OOP Abstract](https://www.petanikode.com/java-oop-abstract/)
