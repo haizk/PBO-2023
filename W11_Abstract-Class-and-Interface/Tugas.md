@@ -16,7 +16,7 @@ Nilai: 84
 ```
 **Gunakan kedua konsep interface dan abstract class Buatlah Minimal 5 Mata Kuliah dan 5 Mahasiswa**
 
-Format penulisan nama file adalah **PPBO_10_NIM**, dengan isi file sebagai berikut:
+Format penulisan nama file adalah **PPBO_11_NIM**, dengan isi file sebagai berikut:
 
 ```java
 // Nama : ...
