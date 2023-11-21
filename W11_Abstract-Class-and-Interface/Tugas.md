@@ -8,6 +8,11 @@ Mahasiswa A :
 Nilai Kuliah A = 80, SKS = 3
 Nilai Kuliah B = 90, SKS = 2
 -> ((80*3) + (90*2))5 = 420/5 = 84 (Nilai Final)
+
+Output :
+Nama: Mahasiswa A
+Total SKS: 5
+Nilai: 84
 ```
 **Gunakan kedua konsep interface dan abstract class Buatlah Minimal 5 Mata Kuliah dan 5 Mahasiswa**
 
