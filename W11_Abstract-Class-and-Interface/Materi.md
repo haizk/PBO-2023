@@ -111,4 +111,4 @@ Harap dicatat bahwa suatu abstract class hanya bisa meng-extend satu abstract cl
 ### Bacaan
 1. [Baeldung - Java Abstract Class](https://www.baeldung.com/java-abstract-class)
 2. [Petani Kode - Java OOP Abstract](https://www.petanikode.com/java-oop-abstract/)
-3. [Petani Kode - Java OOP Interface](https://www.petanikode.com/java-oop-abstract/)
+3. [Petani Kode - Java OOP Interface](https://www.petanikode.com/java-oop-interface/)
