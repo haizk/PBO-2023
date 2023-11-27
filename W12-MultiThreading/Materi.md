@@ -28,6 +28,10 @@ Setiap kali kalian membuat program Java, paling tidak kalian telah membuat sebua
 Main thread adalah thread yang dibuat untuk mengeksekusi metode main dari program kalian, dan secara otomatis dibuat oleh compiler tanpa harus kalian buat secara manual.
 
 ## Life Cycle of a Thread
+![Thread Lyfe Cycle](ThreadLyfeCycle.png)
+
+Source : TutorialsPoint (https://www.tutorialspoint.com/java/java_multithreading.htm)
+
 
 Life cycle (siklus hidup) dari sebuah thread dalam Java melibatkan serangkaian keadaan yang dimulai saat thread dibuat hingga saat thread selesai dieksekusi atau dihentikan. Berikut adalah empat keadaan utama dalam siklus hidup sebuah thread:
 
@@ -99,5 +103,151 @@ public class Main {
 }
 
 ```
+## Thread Priorities
 
-## Cycle 
+Thread priority atau prioritas thread adalah nilai numerik yang menunjukkan seberapa pentingnya sebuah thread dibandingkan dengan thread lainnya dalam suatu program. Sistem operasi menggunakan nilai prioritas untuk menentukan urutan eksekusi thread ketika ada lebih dari satu thread yang bersaing untuk sumber daya CPU.
+
+Prioritas thread Java berada dalam rentang antara `MIN_PRIORITY` (konstanta 1) dan `MAX_PRIORITY` (konstanta 10). Secara default, setiap thread diberi prioritas `NORM_PRIORITY` (konstanta 5). Semakin tinggi nilai prioritas, semakin penting thread tersebut dianggap oleh sistem operasi. Sistem operasi kemudian akan berusaha memberikan CPU lebih banyak kepada thread dengan prioritas lebih tinggi daripada yang memiliki prioritas lebih rendah. Namun terdapat 
+
+Namun, perlu diingat bahwa implementasi prioritas thread dapat bervariasi antara sistem operasi. Beberapa sistem operasi memberikan dukungan penuh terhadap nilai prioritas, sementara yang lain mungkin memberikan tingkat kontrol yang lebih terbatas.
+
+Dalam Java, Anda dapat mengatur prioritas thread menggunakan metode `setPriority()` dari kelas Thread. Namun, tingkat kontrol ini tergantung pada implementasi sistem operasi dan virtual machine Java yang digunakan. Umumnya, sebaiknya tidak terlalu mengandalkan prioritas thread untuk mengatur logika bisnis atau alur kerja program secara tepat, karena perilaku ini dapat bervariasi antara sistem operasi.
+
+Contoh code :
+```java
+class MyThread extends Thread {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(Thread.currentThread().getName() + " Count: " + i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+        }
+    }
+}
+
+public class ThreadPriorityExample {
+    public static void main(String args[]) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+        MyThread t3 = new MyThread();
+
+        // Set prioritas thread
+        t1.setPriority(Thread.MIN_PRIORITY); // Prioritas minimum
+        t2.setPriority(Thread.NORM_PRIORITY); // Prioritas normal (default)
+        t3.setPriority(Thread.MAX_PRIORITY); // Prioritas maksimum
+
+        // Memulai thread
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+```
+
+## Method yang Ada di Kelas Thread
+1. start()
+
+   Metode ini digunakan untuk memulai eksekusi thread. Itu mengakibatkan pemanggilan metode run() pada objek Thread.
+   ```java
+   Thread myThread = new MyThread();
+   myThread.start();
+   ```
+2. sleep(long milliseconds)
+
+   Metode ini memaksa thread saat ini untuk tidur selama jangka waktu tertentu (dalam milidetik).
+   ```java
+   try {
+       Thread.sleep(1000); // Thread tidur selama 1 detik
+   } catch (InterruptedException e) {
+       e.printStackTrace();
+   }
+   ```
+3. join()
+
+   Metode ini membuat thread yang memanggilnya menunggu sampai thread yang disebutnya selesai.
+   ```java
+   Thread anotherThread = new AnotherThread();
+   anotherThread.start();
+   try {
+       anotherThread.join(); // Menunggu sampai thread selesai
+   } catch (InterruptedException e) {
+       e.printStackTrace();
+   }
+   ```
+4. isAlive()
+
+   Metode ini mengembalikan true jika thread masih hidup atau false jika telah selesai.
+   ```java
+   if (myThread.isAlive()) {
+       System.out.println("Thread masih berjalan.");
+   } else {
+       System.out.println("Thread telah selesai.");
+   }
+   ```
+   
+6. setName(String name) dan getName()
+
+   Metode `setName()` digunakan untuk menetapkan nama thread, sedangkan `getName()` untuk mendapatkan nama thread.
+   ```java
+   myThread.setName("MyThread");
+   String threadName = myThread.getName();
+   ```
+7. interrupt()
+
+   Metode ini digunakan untuk menghentikan thread yang sedang tidur atau dalam keadaan terblokir.
+   ```java
+   myThread.interrupt();
+   ```
+   
+8. currentThread()
+
+   Metode yang digunakan untuk mendapatkan referensi ke thread saat ini yang sedang dieksekusi.
+   ```java
+   Thread.yield();
+   ```
+
+## Keuntungan MultiThreading
+Keuntungan dari sistem yang menerapkan multithreading dapat kita kategorikan menjadi 4
+bagian:
+
+a) Responsif. 
+
+Aplikasi interaktif menjadi tetap responsif meskipun sebagian dari program
+sedang diblok atau melakukan operasi lain yang panjang. Umpamanya, sebuah thread dari
+web browser dapat melayani permintaan pengguna sementara thread yang lain berusaha
+menampilkan gambar.
+
+b) Berbagi sumber daya. 
+
+Beberapa thread yang melakukan proses yang sama akan berbagi
+sumber daya. Keuntungannya adalah mengizinkan sebuah aplikasi untuk mempunyai
+beberapa thread yang berbeda dalam lokasi memori yang sama.
+
+c) Ekonomis. 
+
+Pembuatan sebuah proses memerlukan pengalokasian memori dan sumber
+daya. Alternatifnya adalah dengan menggunakan thread, karena thread membagi memori
+dan sumber daya yang dimilikinya sehingga lebih ekonomis untuk membuat thread dan
+context switching thread. Akan susah mengukur perbedaan waktu antara thread dan
+switch, tetapi secara umum pembuatan dan pengaturan proses akan memakan waktu lebih
+lama dibandingkan dengan thread. Pada Solaris, pembuatan proses memakan waktu 30
+kali lebih lama dibandingkan pembuatan thread sedangkan proses context switch 5 kali
+lebih lama dibandingkan context switching thread.
+
+d) Utilisasi arsitektur multiprosesor. 
+
+Keuntungan dari multithreading dapat sangat meningkat
+pada arsitektur multiprosesor, dimana setiap thread dapat berjalan secara paralel di atas
+procesor yang berbeda. Pada arsitektur processor tunggal, CPU menjalankan setiap thread
+secara bergantian tetapi hal ini berlangsung sangat cepat sehingga menciptakan ilusi
+paralel, tetapi pada kenyataanya hanya satu thread yang dijalankan CPU pada satu-satuan
+waktu
+
+# Baca Lebih Lanjut
+- [Java - Multithreading - Tutorialspoint](https://www.tutorialspoint.com/java/java_multithreading.htm)
+- [Multithreading in Java - GeekForGeeks](https://www.geeksforgeeks.org/multithreading-in-java/)
+- [Multithreading in Java – What is Java Multithreading? - Great Learning](https://www.mygreatlearning.com/blog/multithreading-in-java/)
+- [Chapter 2 Multithreading - Oracle](https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqe/)
