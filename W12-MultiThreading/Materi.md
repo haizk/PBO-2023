@@ -251,3 +251,4 @@ waktu
 - [Multithreading in Java - GeekForGeeks](https://www.geeksforgeeks.org/multithreading-in-java/)
 - [Multithreading in Java – What is Java Multithreading? - Great Learning](https://www.mygreatlearning.com/blog/multithreading-in-java/)
 - [Chapter 2 Multithreading - Oracle](https://docs.oracle.com/cd/E19455-01/806-3461/6jck06gqe/)
+- [Life Cycle of Thread in Java | Thread State - Scientech Easy](https://www.scientecheasy.com/2020/08/life-cycle-of-thread-in-java.html/)
