@@ -25,7 +25,7 @@ Anda diminta untuk membuat sebuah program sederhana yang menghitung jumlah bilan
 ### Format Pengumpulan:
 - Kirimkan kode program, komentar yang menjelaskan setiap bagian pada code sangat dihargai.
 - Jelaskan hasil perbandingan dan temuan dari implementasi multithreading diakhir code dengan menggunakan comment section.
-- Format penulisan nama file adalah **PPBO_11_NIM**, dengan isi file sebagai berikut:
+- Format penulisan nama file adalah **PPBO_12_NIM**, dengan isi file sebagai berikut:
 
 ```java
 // Nama : ...
