@@ -7,6 +7,59 @@ Unit Testing adalah metode untuk menguji source code agar sesuai untuk digunakan
 Unit testing adalah langkah penting dalam desain dan implementasi perangkat lunak. Hal ini tidak hanya meningkatkan efisiensi dan efektivitas kode, tetapi juga membuat kode menjadi lebih kuat dan mengurangi kemunduran 
 dalam pengembangan dan pemeliharaan di masa mendatang.
 
+### Cara Membuat Unit Testing
+1. Membuat Java Project
+
+   Buatlah sebuah project Java di IDE anda dengan menggunakan build system Maven.
+
+3. Menambahkan Dependency `JUnit`
+   Pada file `pom.xml` lakukan add dependency dengan cara klik alt + ins lalu tambahkan `JUnit`.
+   Lalu di bagian file pom.xml nya akan terbentuk seperti berikut.
+   ```java
+    <dependency>
+       <groupId>junit</groupId>
+       <artifactId>junit</artifactId>
+       <version>4.12</version>
+       <scope>test</scope>
+    </dependency>
+    ```
+
+3. Membuat Class Baru yang Akan Diberikan Unit Test
+
+   Buatlah sebuah kelas baru. Pada contoh ini dibuat class `Circle` yang didalamnya terdapat method `calculateArea` untuk menghitung luasnya.
+   ```java
+   public class Circle {
+
+      public static double calculateArea(double radius) {
+          return Math.PI * radius * radius;
+      }
+    }
+   ```
+   
+4. Membuat Unit Test untuk Class Sebelumnya
+
+   Selanjutnya buat Unit Test untuk `Circle` class untuk memastikan method `calculateArea` bekerja sesuai dengan yang diharapkan. Caranya dengan membuat class didalam src/main/test directory.
+   Pada contoh ini dibuat class `CircleTest` yang berisikan method `givenRadius_whenCalculateArea_thenReturnArea()` kemudian membandingkan antara actual area hasil dari perhitungan di class     Circle dan juga expexted area hasil perhitungan sebagai testingnya.
+   ```java
+   import org.junit.Assert;
+   import org.junit.jupiter.api.Test;
+
+   public class CircleTest {
+
+    @Test
+    public void givenRadius_whenCalculateArea_thenReturnArea() {
+        double actualArea = Circle.calculateArea(2.0);
+        double expectedArea = 3.141592653589793 * 2.0 * 2.0;
+        double delta = 0.001;
+        Assert.assertEquals(expectedArea, actualArea, delta);
+      }
+    }
+   ```
+   Dalam kasus ini menggunakan annotation `@Test` dari JUnit yang menandakan method `givenRadius_whenCalculateArea_thenReturnArea()` akan dieksekusi sebagai test case selama proses testing.
+
+5. Run Pengujian pada unnit test yang telah dibuat tersebut.
+
+
 
 ## Documentation
 
