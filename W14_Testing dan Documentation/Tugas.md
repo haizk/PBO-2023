@@ -9,6 +9,7 @@
 
 ### Format Pengumpulan:
 - Kirimkan kode program beserta file unit testingnya.
+- Kumpulan screenshot hasil generate dari JavaDoc, dalam format .pdf.
 - Format penulisan nama file adalah **PPBO_14_NIM** untuk class utamanya dan **PPBO_14_NIMTest** untuk unit testingnya, dengan isi file sebagai berikut:
 
 File Class Utama :
