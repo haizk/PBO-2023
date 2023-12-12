@@ -13,15 +13,14 @@ dalam pengembangan dan pemeliharaan di masa mendatang.
    Buatlah sebuah project Java di IDE anda dengan menggunakan build system Maven.
 
 3. Menambahkan Dependency `JUnit`
-   Pada file `pom.xml` lakukan add dependency dengan cara klik alt + ins lalu tambahkan `JUnit`.
+   Pada file `pom.xml` lakukan add dependency dengan cara klik `alt + ins` untuk windows lalu tambahkan `JUnit`.
    Lalu di bagian file pom.xml nya akan terbentuk seperti berikut.
    ```java
-    <dependency>
-       <groupId>junit</groupId>
-       <artifactId>junit</artifactId>
-       <version>4.12</version>
-       <scope>test</scope>
-    </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.8.2</version>
+        </dependency>>
     ```
 
 3. Membuat Class Baru yang Akan Diberikan Unit Test
@@ -156,5 +155,5 @@ Untuk menghasilkan dokumentasi JavaDoc, Anda dapat menggunakan alat bawaan yang 
    Di dalamnya, Anda akan menemukan file HTML dan direktori yang berisi dokumentasi terstruktur.
 7. Membuka Dokumentasi
    
-   Didalam folder baru yang bernama `docs` tadi akan terdapat file bernama `index.html` buka file tersebut di browser anda dan kita dapat melihat dokumentasi JavDoc kita.
+   Didalam folder baru yang bernama `docs` tadi akan terdapat file bernama `index.html` buka file tersebut di browser anda dan kita dapat melihat dokumentasi JavaDoc kita.
    
