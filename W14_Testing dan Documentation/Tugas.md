@@ -4,7 +4,7 @@
 - Buatlah sebuah program java yang berisi 5 method dengan tema bebas.
 - Buatlah unit testing dari tiap-tiap method tersebut.
 - Dokumentasikan dalam bentuk JavaDoc tiap class dan methodnya.
-- Project menggunakan bahasa pemrograman java dengan build system Maven.
+- Project menggunakan bahasa pemrograman java dengan build system Maven atau Gradle.
 - Kreativitas anda dalam mengerjakan tugas sangat dihargai.
 
 ### Format Pengumpulan:
