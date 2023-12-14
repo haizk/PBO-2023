@@ -156,4 +156,23 @@ Untuk menghasilkan dokumentasi JavaDoc, Anda dapat menggunakan alat bawaan yang 
 7. Membuka Dokumentasi
    
    Didalam folder baru yang bernama `docs` tadi akan terdapat file bernama `index.html` buka file tersebut di browser anda dan kita dapat melihat dokumentasi JavaDoc kita.
+
+
+### Macam-macam tag yang bisa digunakan di JavaDoc
+Berikut beberapa tag yang dapat digunakan ketika melakukan dokumentasi menggunakan JavaDoc:
+
+tag         | Deskripsi 
+---------------------------- | ------ 
+@author | Digunakan untuk menyatakan penulis dari kelas atau metode.
+@code atau {@code} |  Digunakan untuk menyisipkan kode dalam teks dokumentasi.
+@link atau {@link} | Digunakan untuk menyisipkan tautan ke elemen lain dalam dokumentasi.
+@param | menyediakan deskripsi yang berguna tentang parameter atau masukan yang diharapkan dari sebuah metode
+@return | memberikan deskripsi tentang apa yang akan atau dapat dikembalikan oleh sebuah metode
+@see | akan menghasilkan tautan yang mirip dengan tag {@link}, tetapi lebih dalam konteks referensi dan tidak sebaris
+@since | menentukan versi kelas, bidang, atau metode yang ditambahkan ke proyek
+@version | menentukan versi perangkat lunak, biasanya digunakan dengan makro %I% dan %G%.
+@throws | digunakan untuk menjelaskan lebih lanjut kasus-kasus yang akan menimbulkan pengecualian pada perangkat lunak
+@deprecated | memberikan penjelasan mengapa kode tidak digunakan lagi, kapan kode tersebut tidak digunakan lagi, dan apa saja alternatifnya
+
+
    
